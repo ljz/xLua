@@ -132,6 +132,9 @@ public class ToDoTest : MonoBehaviour {
         LuaFunction d_e = luaEnv.Global.Get<LuaFunction>("e");
         d_e.Call();
 
+
+        //5.lua调用C#
+
     }
 	
 	// Update is called once per frame
