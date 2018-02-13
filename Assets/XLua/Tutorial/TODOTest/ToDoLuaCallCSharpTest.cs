@@ -178,7 +178,7 @@ namespace Tutorial1
     }
 }
 
-public class LuaCallCs : MonoBehaviour
+public class LuaCallCs1 : MonoBehaviour
 {
     LuaEnv luaenv = null;
     string script = @"
