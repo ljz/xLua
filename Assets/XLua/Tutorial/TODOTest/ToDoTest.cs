@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using XLua;
+using LuaAPI = XLua.LuaDLL.Lua;
+
 
 public class ToDoTest : MonoBehaviour {
     LuaEnv luaEnv = null;
@@ -60,77 +63,113 @@ public class ToDoTest : MonoBehaviour {
         Debug.Log("in ToDoTest Start");
         luaEnv = new LuaEnv();
 
+        //LuaAPI.InitEngine(luaEnv.L);
+        //List<string> paths = new List<string>() {
+        //        XLuaConst.luaResDir,
+        //        Path.Combine(XLuaConst.luaResDir, "client"),
+        //        Path.Combine(XLuaConst.luaResDir, "globalcommon"),
+        //        "script",
+        //        "script/client",
+        //        "script/globalcommon",
+        //        XLuaConst.luaDir,
+        //        Path.Combine(XLuaConst.luaDir, "client"),
+        //        Path.Combine(XLuaConst.luaDir, "globalcommon"),
+        //    };
+
+
         //1.执行简单的lua代码
         //luaEnv.DoString("print('lua code in ToDoTest')");
 
         //2.加载lua文件，这里这种方式只能够加载Resources文件夹下面的，并且是lua.txt类型的文件，感觉没啥乱用。
         //文档你说的是Resources文件夹下面的才需要加txt后缀，那么就是说当前文件夹下面的不需要。但是实验得出的是找不到模块。什么鬼？
-        //luaEnv.DoString("require('testloadfile')");
+        //我看FQA中说的是：如果要打包到安装包里面，就必须是lua.txt,如果不打到里面就随便什么后缀都可以，然后通过CustomLoader或者设置package.path去读这个目录。
+        //3.自定义Loader
+        luaEnv.AddLoader((ref string filename) =>
+        {
+            filename = Application.dataPath + "/XLua/Tutorial/TODOTest/Resources/" + filename.Replace('.', '/') + ".lua";
+            if (File.Exists(filename))
+            {
+                var script = File.ReadAllText(filename);
+                return System.Text.Encoding.Default.GetBytes(script);
+            }
+            else
+            {
+                Debug.Log("不存在这个文件" + filename);
+                return null;
+            }
+
+        });
+
+        luaEnv.DoString("require('testloadfile')");
         //luaEnv.DoString("require('testloadfile2')");
 
 
-
-
-        //3.自定义Loader
-        //luaEnv.AddLoader((ref string filename) =>
+        //luaenv.AddLoader(new SignatureLoader(PUBLIC_KEY, (ref string filepath) =>
         //{
-        //    if (filename == "InMemory")
+        //    filepath = Application.dataPath + "/XLua/Examples/10_SignatureLoader/" + filepath.Replace('.', '/') + ".lua";
+        //    if (File.Exists(filepath))
         //    {
-        //        string script = "return {ccc = 999666}";
-        //        return System.Text.Encoding.UTF8.GetBytes(script);
+        //        return File.ReadAllBytes(filepath);
         //    }
-        //    return null;
-        //});
+        //    else
+        //    {
+        //        return null;
+        //    }
+        //}));
+
+
+
+
         //luaEnv.DoString("print('InMemory.cc=',require('InMemory').ccc) ");
 
         //4.C# Call Lua
-        luaEnv.DoString(script);
+        //luaEnv.DoString(script);
 
-        Debug.Log("_G.a =" + luaEnv.Global.Get<int>("a"));
-        Debug.Log("_G.b =" + luaEnv.Global.Get<string>("b"));
-        Debug.Log("_G.c =" + luaEnv.Global.Get<bool>("c"));
+        //Debug.Log("_G.a =" + luaEnv.Global.Get<int>("a"));
+        //Debug.Log("_G.b =" + luaEnv.Global.Get<string>("b"));
+        //Debug.Log("_G.c =" + luaEnv.Global.Get<bool>("c"));
 
         //映射到有对应字段的Class， by value
-        DClass d = luaEnv.Global.Get<DClass>("d");
-        Debug.Log("_G.d = {f1=" + d.f1 + ", f2 = " + d.f2 + "}");
+        //DClass d = luaEnv.Global.Get<DClass>("d");
+        //Debug.Log("_G.d = {f1=" + d.f1 + ", f2 = " + d.f2 + "}");
 
         //映射到Dictinoary<string, double>, by value
-        Dictionary<string, double> d1 = luaEnv.Global.Get<Dictionary<string, double>>("d");
-        Debug.Log("_G.d = {f1=" + d1["f1"] + ", f2=" + d1["f2"] + "}");
+        //Dictionary<string, double> d1 = luaEnv.Global.Get<Dictionary<string, double>>("d");
+        //Debug.Log("_G.d = {f1=" + d1["f1"] + ", f2=" + d1["f2"] + "}");
 
         //映射到List<double>,by value
-        List<double> d2 = luaEnv.Global.Get<List<double>>("d");
-        Debug.Log("_G.d = {f1 =" + d2[1] + "f2=" + d2[2]+"},_G.d.len = "+d2.Count);
+        //List<double> d2 = luaEnv.Global.Get<List<double>>("d");
+        //Debug.Log("_G.d = {f1 =" + d2[1] + "f2=" + d2[2]+"},_G.d.len = "+d2.Count);
         
 
         //映射到interface实例，by ref,这个要求将interface加入到生成列表。否则会返回null，建议用法。
-        ItfD d3 = luaEnv.Global.Get<ItfD>("d");
-        d3.f2 = 1000;
-        Debug.Log("_G.d = {f1 =" + d3.f1 + "f2=" + d3.f2 + "}");
-        Debug.Log("_G.d:add(1, 2) = "+ d3.add(1, 2) );
+        //ItfD d3 = luaEnv.Global.Get<ItfD>("d");
+        //d3.f2 = 1000;
+        //Debug.Log("_G.d = {f1 =" + d3.f1 + "f2=" + d3.f2 + "}");
+        //Debug.Log("_G.d:add(1, 2) = "+ d3.add(1, 2) );
 
         //映射到LuaTable， by ref
-        LuaTable d4 = luaEnv.Global.Get<LuaTable>("d");
-        Debug.Log("_G.d = {f1 = " + d4.Get<int>("f1") + ", f2 = " + d4.Get<int>("f2") + "}");
+        //LuaTable d4 = luaEnv.Global.Get<LuaTable>("d");
+        //Debug.Log("_G.d = {f1 = " + d4.Get<int>("f1") + ", f2 = " + d4.Get<int>("f2") + "}");
 
         //映射到一个delegate， 要求delegate加到生成列表。建议用法。
-        Action e = luaEnv.Global.Get<Action>("e");
-        e();
+        //Action e = luaEnv.Global.Get<Action>("e");
+        //e();
 
-        FDelegate f = luaEnv.Global.Get<FDelegate>("f");
-        DClass d_ret;
+        //FDelegate f = luaEnv.Global.Get<FDelegate>("f");
+        //DClass d_ret;
 
         //lua的多返回值的映射：从左往右映射到C#的输出参数，输出参数包括返回值，out参数，ref参数。
-        int f_ret = f(100, "John", out d_ret);
-        Debug.Log("ret.d = {f1 = " + d_ret.f1 + ", f2 = " + d_ret.f2 + "}, ret =" + f_ret);
+        //int f_ret = f(100, "John", out d_ret);
+        //Debug.Log("ret.d = {f1 = " + d_ret.f1 + ", f2 = " + d_ret.f2 + "}, ret =" + f_ret);
 
-        GetE ret_e = luaEnv.Global.Get<GetE>("ret_e");
-        e = ret_e();
+        //GetE ret_e = luaEnv.Global.Get<GetE>("ret_e");
+        //e = ret_e();
 
-        e();
+        //e();
 
-        LuaFunction d_e = luaEnv.Global.Get<LuaFunction>("e");
-        d_e.Call();
+        //LuaFunction d_e = luaEnv.Global.Get<LuaFunction>("e");
+        //d_e.Call();
 
 
         //5.lua调用C#
