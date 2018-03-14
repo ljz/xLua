@@ -1,5 +1,4 @@
 -- Lua类定义
-
 local typeFunc = type
 local string = string
 local stringFormat = string.format
@@ -181,3 +180,4 @@ function GetObjectType(InObj)
     
     return objType
 end
+

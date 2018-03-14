@@ -5,6 +5,71 @@ using UnityEngine;
 
 public static class CodGen
 {
+    // [LuaCallCSharp]
+    // public static List<System.Type> module_lua_call_cs_list = new List<System.Type>()
+    // {
+    //     typeof(GameObject),
+    //     typeof(UnityEngine.Object),
+    //     typeof(UnityEngine.Font),
+    //     typeof(UnityEngine.SceneManagement.SceneManager),
+    //     typeof(UnityEngine.TextAnchor),
+    //     typeof(UnityEngine.PlayerPrefs),
+    //     typeof(UnityEngine.WrapMode),
+    //     typeof(UnityEngine.RigidbodyType2D),
+    //     typeof(UnityEngine.Resources),
+    //     typeof(UnityEngine.Camera),
+    //     typeof(UnityEngine.Debug),
+    //     typeof(UnityEngine.Random),
+
+
+    //     typeof(Mathf),
+    //     typeof(Color),
+    //     typeof(Vector3),
+    //     typeof(Vector2),
+    //     typeof(Vector4),
+    //     typeof(Transform),
+    //     typeof(Quaternion),
+    //     typeof(Animator),
+    //     typeof(AnimatorStateInfo),
+    //     typeof(SpriteRenderer), 
+
+
+    //     typeof(UnityEngine.QualitySettings),
+    //     typeof(UnityEngine.AI.NavMeshAgent),
+    //     typeof(UnityEngine.AI.NavMeshObstacle),
+    //     typeof(UnityEngine.AI.NavMeshPath),
+    //     typeof(UnityEngine.AI.NavMesh),
+    //     typeof(UnityEngine.AI.NavMeshPathStatus),
+    //     typeof(UnityEngine.AI.NavMeshHit),
+    //     typeof(UnityEngine.AI.NavMeshTriangulation),
+    //     typeof(UnityEngine.EventSystems.EventTrigger),
+    //     typeof(UnityEngine.EventSystems.BaseRaycaster),
+    //     typeof(UnityEngine.EventSystems.UIBehaviour),
+    //     typeof(MonoBehaviour),
+    //     typeof(Behaviour),
+
+
+    //     typeof(UnityEngine.EventSystems.EventTrigger.TriggerEvent),
+    //     typeof(UnityEngine.EventSystems.EventSystem),
+    //     typeof(UnityEngine.EventSystems.EventTriggerType),
+    //     typeof(UnityEngine.EventSystems.PointerEventData),
+    //     typeof(UnityEngine.EventSystems.EventTrigger.Entry),
+    //     typeof(UnityEngine.Rendering.RenderQueue),
+    //     typeof(Material),
+    //     typeof(CanvasGroup),
+    //     typeof(UnityEngine.RigidbodyConstraints2D),
+    //     typeof(UnityEngine.ParticleSystem),
+    //     typeof(UnityEngine.ParticleSystem.MainModule),
+    //     typeof(UnityEngine.ParticleSystem.MinMaxGradient),
+    //     typeof(UnityEngine.RectTransform),
+    //     typeof(UnityEngine.Renderer),
+    //     typeof(UnityEngine.UI.GraphicRaycaster),
+    //     typeof(UnityEngine.UI.GraphicRaycaster.BlockingObjects),
+    //     typeof(UnityEngine.UI.VerticalLayoutGroup),
+    //     typeof(UnityEngine.RectOffset),
+//     };
+// }
+//     /* */
     [LuaCallCSharp]
     public static List<System.Type> module_lua_call_cs_list = new List<System.Type>()
     {
@@ -88,7 +153,7 @@ public static class CodGen
         typeof(UnityEngine.Canvas),
 
 
-        //// UnityEngine.UI
+        // UnityEngine.UI
         typeof(UnityEngine.Events.UnityEvent),
         typeof(UnityEngine.Events.UnityEventBase),
         typeof(UnityEngine.UI.Button),
@@ -195,14 +260,18 @@ public static class CodGen
         typeof(UnityEngine.PolygonCollider2D),
         typeof(UnityEngine.MeshCollider),
         typeof(UnityEngine.UI.ContentSizeFitter),
-        typeof(System.IO.Directory),
+        // typeof(System.IO.Directory),
         typeof(UnityEngine.UI.LayoutRebuilder),
         typeof(UnityEngine.UI.GridLayoutGroup),
         typeof(TrailRenderer),
         typeof(SkinnedMeshRenderer),
-        //typeof(InverseMask),
-        //typeof(UnityEngine.UI.Graphic),
+        // typeof(InverseMask),
+        // typeof(UnityEngine.UI.Graphic),
 
+
+        //custom
+        typeof(ResManager),    
+    
     };
 
 

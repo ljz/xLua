@@ -32,34 +32,42 @@ namespace CSObjectWrapEditor
 
         static GeneratorConfig()
         {
+            Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GeneratorConfig Start");
             foreach(var type in (from type in Utils.GetAllTypes()
             where type.IsAbstract && type.IsSealed
             select type))
             {
+                Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Fisrt Type");
+                Debug.Log("type ==="+ type);
                 foreach (var field in type.GetFields(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly))
                 {
                     if (field.FieldType == typeof(string) && field.IsDefined(typeof(GenPathAttribute), false))
                     {
+                        Debug.Log(" in if ");
                         common_path = field.GetValue(null) as string;
                         if (!common_path.EndsWith("/"))
                         {
                             common_path = common_path + "/";
                         }
+                        Debug.Log("common_path ====="+common_path);
                     }
                 }
-
+                Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>>>second prop ");
                 foreach (var prop in type.GetProperties(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly))
                 {
                     if (prop.PropertyType == typeof(string) && prop.IsDefined(typeof(GenPathAttribute), false))
                     {
+                        Debug.Log("in if ");
                         common_path = prop.GetValue(null, null) as string;
                         if (!common_path.EndsWith("/"))
                         {
                             common_path = common_path + "/";
                         }
+                        Debug.Log("common_path ========="+common_path);
                     }
                 }
             }
+            Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>>>GeneratorConfig End");
         }
     }
 
@@ -114,6 +122,7 @@ namespace CSObjectWrapEditor
 
         static Generator()
         {
+            Debug.Log("in class Generator struct Generator function");
 #if !XLUA_GENERAL
             TemplateRef template_ref = ScriptableObject.CreateInstance<TemplateRef>();
 
@@ -142,6 +151,7 @@ namespace CSObjectWrapEditor
                 TemplateCommon = { name = template_ref.TemplateCommon.name, text = template_ref.TemplateCommon.text },
             };
 #endif
+            //loader require use it to load file
             luaenv.AddLoader((ref string filepath) =>
             {
                 if (filepath == "TemplateCommon")
@@ -179,6 +189,7 @@ namespace CSObjectWrapEditor
 
         static IEnumerable<MethodInfo> GetExtensionMethods(Type extendedType)
         {
+            Debug.Log("Get Extension Methods by extendedType");
             if (type_has_extension_methods == null)
             {
                 var gen_types = LuaCallCSharp;
@@ -251,7 +262,6 @@ namespace CSObjectWrapEditor
         static void getClassInfo(Type type, LuaTable parameters)
         {
             parameters.Set("type", type);
-
             var constructors = new List<MethodBase>();
             var constructor_def_vals = new List<int>();
             if (!type.IsAbstract)
@@ -546,6 +556,7 @@ namespace CSObjectWrapEditor
         static Dictionary<string, LuaFunction> templateCache = new Dictionary<string, LuaFunction>();
         static void GenOne(Type type, Action<Type, LuaTable> type_info_getter, XLuaTemplate templateAsset, StreamWriter textWriter)
         {
+            Debug.Log("GenOne, chan sheng one ");
             if (isObsolete(type)) return;
             LuaFunction template;
             if (!templateCache.TryGetValue(templateAsset.name, out template))
@@ -565,7 +576,8 @@ namespace CSObjectWrapEditor
             try
             {
                 string genCode = XLua.TemplateEngine.LuaTemplate.Execute(template, type_info);
-                //string filePath = save_path + type.ToString().Replace("+", "").Replace(".", "").Replace("`", "").Replace("&", "").Replace("[", "").Replace("]", "").Replace(",", "") + file_suffix + ".cs";
+                // string filePath = save_path + type.ToString().Replace("+", "").Replace(".", "").Replace("`", "").Replace("&", "").Replace("[", "").Replace("]", "").Replace(",", "") + file_suffix + ".cs";
+                // Debug.Log("filePath ==== "+filePath);
                 textWriter.Write(genCode);
                 textWriter.Flush();
             }
@@ -586,6 +598,7 @@ namespace CSObjectWrapEditor
         static void GenEnumWrap(IEnumerable<Type> types, string save_path)
         {
             string filePath = save_path + "EnumWrap.cs";
+            Debug.Log("filePath ===="+filePath);
             StreamWriter textWriter = new StreamWriter(filePath, false, Encoding.UTF8);
             
             GenOne(null, (type, type_info) =>
@@ -598,12 +611,14 @@ namespace CSObjectWrapEditor
 
         static void GenInterfaceBridge(IEnumerable<Type> types, string save_path)
         {
+            Debug.Log("gen interface bridge save_path ===="+ save_path);
             foreach (var wrap_type in types)
             {
                 if (!wrap_type.IsInterface) continue;
 
                 string filePath = save_path + wrap_type.ToString().Replace("+", "").Replace(".", "")
                     .Replace("`", "").Replace("&", "").Replace("[", "").Replace("]", "").Replace(",", "") + "Bridge.cs";
+                    Debug.Log("filepath ==="+filePath);
                 StreamWriter textWriter = new StreamWriter(filePath, false, Encoding.UTF8);
                 GenOne(wrap_type, (type, type_info) =>
                 {
@@ -957,6 +972,7 @@ namespace CSObjectWrapEditor
 
         static void GenWrap(IEnumerable<Type> types, string save_path)
         {
+            Debug.Log("in GenWrap");
             types = types.Where(type=>!type.IsEnum);
 
 #if GENERIC_SHARING
@@ -964,14 +980,17 @@ namespace CSObjectWrapEditor
 #endif
 
             var typeMap = types.ToDictionary(type => {
-                //Debug.Log("type:" + type);
+                Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>type:" + type);
                 return type.ToString();
             });
 
             foreach (var wrap_type in types)
             {
+                Debug.Log("wrap_type =---=="+wrap_type.ToString());
                 string filePath = save_path + wrap_type.ToString().Replace("+", "").Replace(".", "")
                     .Replace("`", "").Replace("&", "").Replace("[", "").Replace("]", "").Replace(",", "") + "Wrap.cs";
+                
+                Debug.Log("filePath ===---=="+filePath);
                 StreamWriter textWriter = new StreamWriter(filePath, false, Encoding.UTF8);
                 if (wrap_type.IsEnum)
                 {
@@ -1486,6 +1505,8 @@ namespace CSObjectWrapEditor
         {
             templateCache.Clear();
             Directory.CreateDirectory(save_path);
+            Debug.Log("wraps===="+wraps);
+            Debug.Log("save_path ==="+save_path);
             GenWrap(wraps, save_path);
             GenWrapPusher(gc_optimze_list.Concat(wraps.Where(type=>type.IsEnum)).Distinct(), save_path);
             GenPackUnpack(gc_optimze_list.Where(type => !type.IsPrimitive && SizeOf(type) != -1), save_path);
@@ -1535,7 +1556,10 @@ namespace CSObjectWrapEditor
         [MenuItem("XLua/Generate Code", false, 1)]
         public static void GenAll()
         {
+            Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>MenuItem('XLua/Generate Code', false, 1)]");
             var start = DateTime.Now;
+            Debug.Log("start time ==="+start);
+            Debug.Log("create directory common_path ==="+GeneratorConfig.common_path);
             Directory.CreateDirectory(GeneratorConfig.common_path);
             GetGenConfig(Utils.GetAllTypes());
             luaenv.DoString("require 'TemplateCommon'");
@@ -1543,10 +1567,15 @@ namespace CSObjectWrapEditor
             gen_push_types_setter.Call(GCOptimizeList.Where(t => !t.IsPrimitive && SizeOf(t) != -1).Concat(LuaCallCSharp.Where(t => t.IsEnum)).Distinct().ToList());
             var xlua_classes_setter = luaenv.Global.Get<LuaFunction>("SetXLuaClasses");
             xlua_classes_setter.Call(Utils.GetAllTypes().Where(t => t.Namespace == "XLua").ToList());
+            Debug.Log("gen delegate bridges");
             GenDelegateBridges(Utils.GetAllTypes(false));
+            Debug.Log("gen enum wraps");
             GenEnumWraps();
+            Debug.Log("ge code for class");
             GenCodeForClass();
+            Debug.Log("gen lua register");
             GenLuaRegister();
+            Debug.Log("call custom gen");
             callCustomGen();
             Debug.Log("finished! use " + (DateTime.Now - start).TotalMilliseconds + " ms");
             AssetDatabase.Refresh();
@@ -1562,6 +1591,9 @@ namespace CSObjectWrapEditor
 
         public static void CustomGen(string template_src, GetTasks get_tasks)
         {
+            Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>in CustomGen function ");
+            Debug.Log("template_src ===="+template_src);
+            // Debug.Log("")
             GetGenConfig(Utils.GetAllTypes());
 
             LuaFunction template = XLua.TemplateEngine.LuaTemplate.Compile(luaenv,
@@ -1579,6 +1611,7 @@ namespace CSObjectWrapEditor
 
                 try
                 {
+                    Debug.Log("gen_task.Data ========="+gen_task.Data);
                     string genCode = XLua.TemplateEngine.LuaTemplate.Execute(template, gen_task.Data);
                     gen_task.Output.Write(genCode);
                     gen_task.Output.Flush();

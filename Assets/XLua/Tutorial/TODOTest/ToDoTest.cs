@@ -137,7 +137,10 @@ public class ToDoTest : MonoBehaviour {
         });
         //加载这个文件，进而加载一系列的lua文件。
         luaEnv.DoString("require('importlist')");
-        luaEnv.DoString("require('main')");
+        luaEnv.DoString("require('init')");
+        CallLuaFunc("init");
+        CallLuaFunc("start");
+        luaEnv.DoString("require('app.main')");
         //luaEnv.DoString("require('testloadfile2')");
 
         //luaenv.AddLoader(new SignatureLoader(PUBLIC_KEY, (ref string filepath) =>
