@@ -30,6 +30,18 @@ find_path(XLUA_PROJECT_DIR NAMES SConstruct
     )
 
 MARK_AS_ADVANCED(XLUA_PROJECT_DIR)
+#begin lua-rapidjson
+#set (RAPIDJSON_SRC lua-rapidjson/source/rapidjson.cpp)
+#set_property(
+#     SOURCE ${RAPIDJSON_SRC}
+#     APPEND
+#     PROPERTY COMPILE_DEFINITIONS
+#     LUA_LIB
+#)
+#list(APPEND THIRDPART_INC  lua-rapidjson/include)
+#set (THIRDPART_SRC ${THIRDPART_SRC} ${RAPIDJSON_SRC})
+#end lua-rapidjson
+
 
 if (USING_LUAJIT)
 	
@@ -78,31 +90,32 @@ else ()
 	  lua-5.3.4/src/lutf8lib.c lua-5.3.4/src/loadlib.c )
 endif ()
 
-set ( LUA_SOCKET
-    luasocket/auxiliar.c
-    luasocket/buffer.c
-    luasocket/except.c
-    luasocket/inet.c
-    luasocket/io.c
-    luasocket/luasocket.c
-    luasocket/mime.c
-    luasocket/options.c
-    luasocket/select.c
-    luasocket/tcp.c
-    luasocket/timeout.c
-    luasocket/udp.c 
-)
+#set ( LUA_SOCKET
+#    luasocket/auxiliar.c
+#    luasocket/buffer.c
+#    luasocket/except.c
+#    luasocket/inet.c
+#    luasocket/io.c
+#    luasocket/luasocket.c
+#    luasocket/mime.c
+#    luasocket/options.c
+#    luasocket/select.c
+#    luasocket/tcp.c
+#    luasocket/timeout.c
+#    luasocket/udp.c 
+#)
 
-if ( WIN32 AND NOT CYGWIN )
-    list (APPEND LUA_SOCKET luasocket/wsocket.c)
-else ( )
-    list (APPEND LUA_SOCKET luasocket/usocket.c)
-endif ( )
+#if ( WIN32 AND NOT CYGWIN )
+#    list (APPEND LUA_SOCKET luasocket/wsocket.c)
+#else ( )
+#    list (APPEND LUA_SOCKET luasocket/usocket.c)
+#endif ( )
 
 set ( XLUA_CORE
-    i64lib.c
-    perflib.c
+    i64lib.c 
+	perflib.c
     xlua.c
+	ikcp.c
 )
 
 macro(source_group_by_dir proj_dir source_files)
@@ -203,3 +216,7 @@ else ( )
         )
     endif()
 endif ( )
+
+
+
+

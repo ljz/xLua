@@ -9,8 +9,9 @@ print("游戏入口函数, 从这里开始lua逻辑")
 print(" in init.lua >>> game enter function, here start lua function")
 function init()
 	-- print(">>>>>>>>><<<<<<<<<<<<<<<<engine init")
-	require("module")
-	require("classdefine")
+	-- require("module")
+	Import "classdefine"
+	-- require("classdefine")
     -- Import "globalcommon.const"
 
     -- if const.startDebuggerOnInit then
@@ -70,7 +71,6 @@ function start()
     -- end
 	
 	Import "app.main"
-	print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Import Finish")
 	main.Init()
 	local uimanager = GetApp():GetUIManager()
 	uimanager:OpenPanel("testpanel")

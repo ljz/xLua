@@ -1,28 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <LangVersion>4</LangVersion>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{370BDE1D-66AF-97D4-3814-3BF01A24725F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <BaseDirectory>Assets</BaseDirectory>
+    <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_4;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_CLUSTERINPUT;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_1_0;UNITY_2018_1;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,418 +37,504 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.XML" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
-     <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
-     <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
-     <Compile Include="Assets\XLua\Examples\05_NoGc\NoGc.cs" />
-     <Compile Include="Assets\XLua\Examples\06_Coroutine\CoroutineTest.cs" />
-     <Compile Include="Assets\XLua\Examples\06_Coroutine\Coroutine_Runner.cs" />
-     <Compile Include="Assets\XLua\Examples\07_AsyncTest\AsyncTest.cs" />
-     <Compile Include="Assets\XLua\Examples\07_AsyncTest\MessageBox.cs" />
-     <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest.cs" />
-     <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest2.cs" />
-     <Compile Include="Assets\XLua\Examples\08_Hotfix\StatefullTest.cs" />
-     <Compile Include="Assets\XLua\Examples\09_GenericMethod\Foo.cs" />
-     <Compile Include="Assets\XLua\Examples\09_GenericMethod\GenericMethodExample.cs" />
-     <Compile Include="Assets\XLua\Examples\10_SignatureLoader\SignatureLoaderTest.cs" />
-     <Compile Include="Assets\XLua\Examples\11_RawObject\RawObjectTest.cs" />
-     <Compile Include="Assets\XLua\Examples\12_ReImplementInLua\ReImplementInLua.cs" />
-     <Compile Include="Assets\XLua\Examples\ExampleGenConfig.cs" />
-     <Compile Include="Assets\XLua\Gen\CSCallLuaItfDBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\Coroutine_RunnerWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\DelegatesGensBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\EnumWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\Foo1ChildWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\Foo1ParentWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\Foo2ChildWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\Foo2ParentWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\FooExtensionWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\FooWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\InvokeLuaICalcBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\LuaBehaviourWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\PackUnpack.cs" />
-     <Compile Include="Assets\XLua\Gen\ResManagerWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\SystemCollectionsGenericList1SystemInt32Wrap.cs" />
-     <Compile Include="Assets\XLua\Gen\SystemCollectionsGenericList1UnityEngineEventSystemsEventTriggerEntryWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\SystemCollectionsIEnumeratorBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\SystemObjectWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\SystemReflectionMissingWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\SystemTypeWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\SystemValueTypeWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\TutorialBaseClassWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\TutorialCalcWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\TutorialDrivenClassExtensionsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\TutorialDrivenClassWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAINavMeshAgentWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAINavMeshHitWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAINavMeshObstacleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAINavMeshPathWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAINavMeshTriangulationWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAINavMeshWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAnimationClipWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAnimationCurveWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAnimationWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAnimatorClipInfoWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAnimatorStateInfoWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAnimatorWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineAsyncOperationWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineBehaviourWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineBoundsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineBoxColliderWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineCameraWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineCanvasGroupWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineCanvasRendererWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineCanvasWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineCapsuleColliderWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineCircleCollider2DWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineColorWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineComponentWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineDebugWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventSystemsBaseEventDataWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventSystemsBaseRaycasterWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventSystemsEventSystemWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventSystemsEventTriggerEntryWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventSystemsEventTriggerTriggerEventWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventSystemsEventTriggerWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventSystemsPointerEventDataWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventSystemsUIBehaviourWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventsUnityEvent1SystemBooleanWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventsUnityEvent1SystemSingleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventsUnityEvent1SystemStringWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventsUnityEvent1UnityEngineEventSystemsBaseEventDataWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventsUnityEventBaseWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineEventsUnityEventWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineFontWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineGameObjectWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineInputWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineKeyframeWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineLayerMaskWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineMaterialWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineMathfWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineMatrix4x4Wrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineMeshColliderWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineMeshRendererWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineMonoBehaviourWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineObjectWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemBurstWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemCollisionModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemColorBySpeedModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemColorOverLifetimeModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemCustomDataModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemEmissionModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemEmitParamsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemExternalForcesModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemForceOverLifetimeModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemInheritVelocityModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemLightsModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemLimitVelocityOverLifetimeModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemMainModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemMinMaxCurveWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemMinMaxGradientWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemNoiseModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemParticleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemRendererWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemRotationBySpeedModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemRotationOverLifetimeModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemShapeModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemSizeBySpeedModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemSizeOverLifetimeModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemSubEmittersModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemTextureSheetAnimationModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemTrailModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemTriggerModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemVelocityOverLifetimeModuleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineParticleSystemWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEnginePlayerPrefsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEnginePolygonCollider2DWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineQualitySettingsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineQuaternionWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineRandomStateWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineRandomWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineRay2DWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineRayWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineRectOffsetWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineRectTransformWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineRectWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineRenderTextureWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineRendererWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineResourcesWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineRigidbody2DWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineRuntimeAnimatorControllerWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineSceneManagementSceneManagerWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineSkinnedMeshRendererWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineSpriteRendererWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineSpriteWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineTextAssetWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineTextGenerationSettingsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineTextGeneratorWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineTexture2DWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineTimeWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineTrailRendererWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineTransformWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIButtonButtonClickedEventWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIButtonWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIColorBlockWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIContentSizeFitterWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIDropdownDropdownEventWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIDropdownOptionDataListWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIDropdownOptionDataWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIDropdownWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIGraphicRaycasterWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIGraphicWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIGridLayoutGroupWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIHorizontalOrVerticalLayoutGroupWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIImageWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIInputFieldOnChangeEventWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIInputFieldSubmitEventWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIInputFieldWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUILayoutGroupWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUILayoutRebuilderWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIMaskableGraphicCullStateChangedEventWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIMaskableGraphicWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIRawImageWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIScrollRectScrollRectEventWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIScrollRectWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIScrollbarScrollEventWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIScrollbarWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUISelectableWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUISliderSliderEventWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUISliderWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUITextWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIToggleGroupWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIToggleToggleEventWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIToggleWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineUIVerticalLayoutGroupWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineVector2Wrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineVector3Wrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineVector4Wrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineWWWWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\UnityEngineWaitForSecondsWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\WrapPusher.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaGenAutoRegister.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTestIExchangerBridge.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTestMyStructWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTestNoGcWrap.cs" />
-     <Compile Include="Assets\XLua\Gen\XLuaTestPeddingWrap.cs" />
-     <Compile Include="Assets\XLua\Src\CodeEmit.cs" />
-     <Compile Include="Assets\XLua\Src\CopyByValue.cs" />
-     <Compile Include="Assets\XLua\Src\DelegateBridge.cs" />
-     <Compile Include="Assets\XLua\Src\GenAttributes.cs" />
-     <Compile Include="Assets\XLua\Src\InternalGlobals.cs" />
-     <Compile Include="Assets\XLua\Src\LuaBase.cs" />
-     <Compile Include="Assets\XLua\Src\LuaDLL.cs" />
-     <Compile Include="Assets\XLua\Src\LuaEnv.cs" />
-     <Compile Include="Assets\XLua\Src\LuaException.cs" />
-     <Compile Include="Assets\XLua\Src\LuaFunction.cs" />
-     <Compile Include="Assets\XLua\Src\LuaTable.cs" />
-     <Compile Include="Assets\XLua\Src\MethodWarpsCache.cs" />
-     <Compile Include="Assets\XLua\Src\ObjectCasters.cs" />
-     <Compile Include="Assets\XLua\Src\ObjectPool.cs" />
-     <Compile Include="Assets\XLua\Src\ObjectTranslator.cs" />
-     <Compile Include="Assets\XLua\Src\ObjectTranslatorPool.cs" />
-     <Compile Include="Assets\XLua\Src\RawObject.cs" />
-     <Compile Include="Assets\XLua\Src\SignatureLoader.cs" />
-     <Compile Include="Assets\XLua\Src\StaticLuaCallbacks.cs" />
-     <Compile Include="Assets\XLua\Src\TemplateEngine\TemplateEngine.cs" />
-     <Compile Include="Assets\XLua\Src\TypeExtensions.cs" />
-     <Compile Include="Assets\XLua\Src\Utils.cs" />
-     <Compile Include="Assets\XLua\Tutorial\CSharpCallLua\CSCallLua.cs" />
-     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\ByFile.cs" />
-     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByString\ByString.cs" />
-     <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\Loader\CustomLoader.cs" />
-     <Compile Include="Assets\XLua\Tutorial\LuaCallCSharp\LuaCallCs.cs" />
-     <Compile Include="Assets\XLua\Tutorial\TODOTest\ResManager.cs" />
-     <Compile Include="Assets\XLua\Tutorial\TODOTest\ToDoLuaCallCSharpTest.cs" />
-     <Compile Include="Assets\XLua\Tutorial\TODOTest\ToDoTest.cs" />
-     <Compile Include="Assets\XLua\Tutorial\TODOTest\xluaexport.cs" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_22.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_13.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_25.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\iso2022_kr-utf8.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\mailcap.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_doctest2.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_doctest3.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\gbk.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\exception_hierarchy.txt" />
-     <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\message_box.lua.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_38.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_46.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\CREDITS.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_41.txt" />
-     <None Include="Assets\XLua\Examples\06_Coroutine\Resources\cs_coroutine.lua.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\shift_jis.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_09.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_03.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\gb2312-utf8.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_20.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\xmltestdata\simple-ns.xml" />
-     <None Include="Assets\XLua\Src\Editor\LinkXmlGen\LinkXmlGen.tpl.txt" />
-     <None Include="Assets\XLua\Examples\02_U3DScripting\LuaTestScript.lua.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\big5hkscs.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_36.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_doctest.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_24.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\shift_jisx0213.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\euc_kr.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\setuptools-2.1.dist-info\entry_points.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_06.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\gb18030-utf8.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\lib2to3\tests\data\README.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\HISTORY.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\floating_points.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\pip-1.5.6.dist-info\top_level.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\big5-utf8.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\tkinter\test\README.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_35.txt" />
-     <None Include="Assets\XLua\Gen\link.xml" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\leakers\README.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_18.txt" />
-     <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\hz-utf8.txt" />
-     <None Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_11.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_17.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\lib2to3\PatternGrammar.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_26.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\euc_jp.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\idle_test\README.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\euc_jisx0213.txt" />
-     <None Include="Assets\XLua\Src\Editor\Template\LuaClassWrapGCM.tpl.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_37.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\gb2312.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\iso2022_kr.txt" />
-     <None Include="Assets\XLua\Examples\06_Coroutine\Resources\coruntine_test.lua.txt" />
-     <None Include="Assets\XLua\Src\Editor\Template\LuaWrapPusher.tpl.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_27.txt" />
-     <None Include="Assets\XLua\Src\Editor\Template\LuaDelegateBridge.tpl.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_31.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\tokenize_tests-utf8-coding-cookie-and-no-utf8-bom-sig.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\ieee754.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_01.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\tokenize_tests.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_04.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_39.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_12a.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\johab-utf8.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_21.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\cp949-utf8.txt" />
-     <None Include="Assets\XLua\Resources\xlua\util.lua.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\iso2022_jp.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\xmltestdata\test.xml" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\distutils\README.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\help.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\README.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\shift_jis-utf8.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_15.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_30.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\data\README.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_19.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\NEWS.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_14.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\euc_jp-utf8.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\hz.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\iso2022_jp-utf8.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_43.txt" />
-     <None Include="Assets\XLua\Examples\03_UIEvent\ButtonInteraction.lua.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_10.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\tokenize_tests-utf8-coding-cookie-and-utf8-bom-sig.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_40.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\turtledemo\demohelp.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\math_testcases.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\euc_jisx0213-utf8.txt" />
-     <None Include="Assets\XLua\Src\Editor\Template\TemplateCommon.lua.txt" />
-     <None Include="Assets\XLua\Src\Editor\Template\LuaEnumWrap.tpl.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_28.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\extend.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_08.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_16.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\setuptools-2.1.dist-info\dependency_links.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\pip-1.5.6.dist-info\entry_points.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_33.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\lib2to3\Grammar.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\turtledemo\about_turtle.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\xmltestdata\simple.xml" />
-     <None Include="Assets\XLua\Resources\perf\profiler.lua.txt" />
-     <None Include="Assets\XLua\Src\Editor\Template\LuaDelegateWrap.tpl.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\cp949.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_32.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_29.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_23.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_45.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\big5.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\setuptools\command\launcher manifest.xml" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\shift_jisx0213-utf8.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\turtledemo\about_turtledemo.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\euc_kr-utf8.txt" />
-     <None Include="Assets\XLua\Resources\perf\memory.lua.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\tokenize_tests-latin1-coding-cookie-and-utf8-bom-sig.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\tokenize_tests-no-coding-cookie-and-utf8-bom-sig-only.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_07.txt" />
-     <None Include="Assets\XLua\Src\Editor\Template\LuaRegisterGCM.tpl.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_12.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cmath_testcases.txt" />
-     <None Include="Assets\XLua\Src\Editor\Template\LuaRegister.tpl.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_02.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_44.txt" />
-     <None Include="Assets\XLua\Src\Editor\Template\LuaInterfaceBridge.tpl.txt" />
-     <None Include="Assets\XLua\Src\Editor\Template\LuaClassWrap.tpl.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\gb18030.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_05.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\formatfloat_testcases.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_doctest4.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_34.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\TODO.txt" />
-     <None Include="Assets\XLua\CHANGELOG.txt" />
-     <None Include="Assets\XLua\Src\Editor\Template\LuaEnumWrapGCM.tpl.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_42.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\sndhdrdata\README.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\gbk-utf8.txt" />
-     <None Include="Assets\XLua\Resources\tdr\tdr.lua.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\johab.txt" />
-     <None Include="Assets\XLua\Src\Editor\Template\PackUnpack.tpl.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\setuptools-2.1.dist-info\top_level.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\crashers\README.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\big5hkscs-utf8.txt" />
-     <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\README.txt" />
- <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Users/apple/Desktop/unity学习文件夹/xlua/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TestRunner">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="nunit.framework">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.HoloLens">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VR">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineBrain.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineClearShot.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineCollider.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineConfiner.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineDollyCart.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineExternalCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineFollowZoom.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineFreeLook.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineMixingCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachinePath.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachinePipeline.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineSmoother.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineSmoothPath.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineStateDrivenCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineTargetGroup.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Behaviours\CinemachineVirtualCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineBasicMultiChannelPerlin.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineComposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineFramingTransposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineGroupComposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineHardLockToTarget.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineHardLookAt.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineOrbitalTransposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachinePOV.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineSameAsFollowObject.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineTrackedDolly.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Components\CinemachineTransposer.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\AxisState.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CameraState.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineBlend.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineBlenderSettings.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineComponentBase.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineCore.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineDebugLogger.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineExtension.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachinePathBase.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachinePropertyAttribute.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\CinemachineVirtualCameraBase.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\GaussianFilter.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\ICinemachineCamera.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\ICinemachineComponent.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\LensSettings.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\NoiseSettings.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\Predictor.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\ReflectionHelpers.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\SplineHelpers.cs" />
+    <Compile Include="Assets\Cinemachine\Base\Runtime\Core\UnityVectorExtensions.cs" />
+    <Compile Include="Assets\Cinemachine\PostFX\CinemachinePostFX.cs" />
+    <Compile Include="Assets\Cinemachine\PostFX\CinemachinePostProcessing.cs" />
+    <Compile Include="Assets\Cinemachine\Timeline\CinemachineMixer.cs" />
+    <Compile Include="Assets\Cinemachine\Timeline\CinemachineShot.cs" />
+    <Compile Include="Assets\Cinemachine\Timeline\CinemachineTrack.cs" />
+    <Compile Include="Assets\ExposedReferenceExample.cs" />
+    <Compile Include="Assets\playabletest.cs" />
+    <Compile Include="Assets\TestExample.cs" />
+    <Compile Include="Assets\XLua\Examples\01_Helloworld\Helloworld.cs" />
+    <Compile Include="Assets\XLua\Examples\02_U3DScripting\LuaBehaviour.cs" />
+    <Compile Include="Assets\XLua\Examples\04_LuaObjectOrented\InvokeLua.cs" />
+    <Compile Include="Assets\XLua\Examples\05_NoGc\NoGc.cs" />
+    <Compile Include="Assets\XLua\Examples\06_Coroutine\Coroutine_Runner.cs" />
+    <Compile Include="Assets\XLua\Examples\06_Coroutine\CoroutineTest.cs" />
+    <Compile Include="Assets\XLua\Examples\07_AsyncTest\AsyncTest.cs" />
+    <Compile Include="Assets\XLua\Examples\07_AsyncTest\MessageBox.cs" />
+    <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest.cs" />
+    <Compile Include="Assets\XLua\Examples\08_Hotfix\HotfixTest2.cs" />
+    <Compile Include="Assets\XLua\Examples\08_Hotfix\StatefullTest.cs" />
+    <Compile Include="Assets\XLua\Examples\09_GenericMethod\Foo.cs" />
+    <Compile Include="Assets\XLua\Examples\09_GenericMethod\GenericMethodExample.cs" />
+    <Compile Include="Assets\XLua\Examples\10_SignatureLoader\SignatureLoaderTest.cs" />
+    <Compile Include="Assets\XLua\Examples\11_RawObject\RawObjectTest.cs" />
+    <Compile Include="Assets\XLua\Examples\12_ReImplementInLua\ReImplementInLua.cs" />
+    <Compile Include="Assets\XLua\Examples\ExampleGenConfig.cs" />
+    <Compile Include="Assets\XLua\Src\CodeEmit.cs" />
+    <Compile Include="Assets\XLua\Src\CopyByValue.cs" />
+    <Compile Include="Assets\XLua\Src\DelegateBridge.cs" />
+    <Compile Include="Assets\XLua\Src\GenAttributes.cs" />
+    <Compile Include="Assets\XLua\Src\InternalGlobals.cs" />
+    <Compile Include="Assets\XLua\Src\LuaBase.cs" />
+    <Compile Include="Assets\XLua\Src\LuaDLL.cs" />
+    <Compile Include="Assets\XLua\Src\LuaEnv.cs" />
+    <Compile Include="Assets\XLua\Src\LuaException.cs" />
+    <Compile Include="Assets\XLua\Src\LuaFunction.cs" />
+    <Compile Include="Assets\XLua\Src\LuaTable.cs" />
+    <Compile Include="Assets\XLua\Src\MethodWarpsCache.cs" />
+    <Compile Include="Assets\XLua\Src\ObjectCasters.cs" />
+    <Compile Include="Assets\XLua\Src\ObjectPool.cs" />
+    <Compile Include="Assets\XLua\Src\ObjectTranslator.cs" />
+    <Compile Include="Assets\XLua\Src\ObjectTranslatorPool.cs" />
+    <Compile Include="Assets\XLua\Src\RawObject.cs" />
+    <Compile Include="Assets\XLua\Src\SignatureLoader.cs" />
+    <Compile Include="Assets\XLua\Src\StaticLuaCallbacks.cs" />
+    <Compile Include="Assets\XLua\Src\TemplateEngine\TemplateEngine.cs" />
+    <Compile Include="Assets\XLua\Src\TypeExtensions.cs" />
+    <Compile Include="Assets\XLua\Src\Utils.cs" />
+    <Compile Include="Assets\XLua\Tutorial\CSharpCallLua\CSCallLua.cs" />
+    <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\ByFile.cs" />
+    <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\ByString\ByString.cs" />
+    <Compile Include="Assets\XLua\Tutorial\LoadLuaScript\Loader\CustomLoader.cs" />
+    <Compile Include="Assets\XLua\Tutorial\LuaCallCSharp\LuaCallCs.cs" />
+    <Compile Include="Assets\XLua\Tutorial\TODOTest\ResManager.cs" />
+    <Compile Include="Assets\XLua\Tutorial\TODOTest\ToDoLuaCallCSharpTest.cs" />
+    <Compile Include="Assets\XLua\Tutorial\TODOTest\ToDoTest.cs" />
+    <Compile Include="Assets\XLua\Tutorial\TODOTest\xluaexport.cs" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_22.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_13.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_25.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\iso2022_kr-utf8.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\mailcap.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_doctest2.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_doctest3.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\gbk.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\exception_hierarchy.txt" />
+    <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\message_box.lua.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_38.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_46.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\CREDITS.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_41.txt" />
+    <None Include="Assets\XLua\Examples\06_Coroutine\Resources\cs_coroutine.lua.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\shift_jis.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_09.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_03.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\gb2312-utf8.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_20.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\xmltestdata\simple-ns.xml" />
+    <None Include="Assets\XLua\Examples\02_U3DScripting\LuaTestScript.lua.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\big5hkscs.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_36.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_doctest.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_24.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\shift_jisx0213.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\euc_kr.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\setuptools-2.1.dist-info\entry_points.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_06.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\gb18030-utf8.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\lib2to3\tests\data\README.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\HISTORY.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\floating_points.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\pip-1.5.6.dist-info\top_level.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\big5-utf8.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\tkinter\test\README.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_35.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\leakers\README.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_18.txt" />
+    <None Include="Assets\XLua\Examples\07_AsyncTest\Resources\async_test.lua.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\hz-utf8.txt" />
+    <None Include="Assets\XLua\Tutorial\LoadLuaScript\ByFile\Resources\byfile.lua.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_11.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_17.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\lib2to3\PatternGrammar.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_26.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\euc_jp.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\idle_test\README.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\euc_jisx0213.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\NewUnlitShader.shader" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_37.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\gb2312.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\iso2022_kr.txt" />
+    <None Include="Assets\XLua\Examples\06_Coroutine\Resources\coruntine_test.lua.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_27.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_31.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\tokenize_tests-utf8-coding-cookie-and-no-utf8-bom-sig.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\ieee754.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_01.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\tokenize_tests.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_04.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_39.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_12a.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\johab-utf8.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_21.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\cp949-utf8.txt" />
+    <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
+    <None Include="Assets\XLua\Resources\xlua\util.lua.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\iso2022_jp.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\xmltestdata\test.xml" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\distutils\README.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\help.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\README.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\shift_jis-utf8.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_15.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_30.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\data\README.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_19.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\NEWS.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_14.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\euc_jp-utf8.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\hz.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\iso2022_jp-utf8.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_43.txt" />
+    <None Include="Assets\XLua\Examples\03_UIEvent\ButtonInteraction.lua.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_10.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\tokenize_tests-utf8-coding-cookie-and-utf8-bom-sig.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_40.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\turtledemo\demohelp.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\math_testcases.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\euc_jisx0213-utf8.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_28.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\extend.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_08.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_16.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\setuptools-2.1.dist-info\dependency_links.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\pip-1.5.6.dist-info\entry_points.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\NewSurfaceShader.shader" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_33.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\lib2to3\Grammar.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\turtledemo\about_turtle.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\xmltestdata\simple.xml" />
+    <None Include="Assets\XLua\Resources\perf\profiler.lua.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\cp949.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_32.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_29.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_23.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_45.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\big5.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\setuptools\command\launcher manifest.xml" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\shift_jisx0213-utf8.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\turtledemo\about_turtledemo.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\euc_kr-utf8.txt" />
+    <None Include="Assets\XLua\Resources\perf\memory.lua.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\tokenize_tests-latin1-coding-cookie-and-utf8-bom-sig.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\tokenize_tests-no-coding-cookie-and-utf8-bom-sig-only.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_07.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_12.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cmath_testcases.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_02.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_44.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\gb18030.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_05.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\formatfloat_testcases.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_doctest4.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_34.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\idlelib\TODO.txt" />
+    <None Include="Assets\XLua\CHANGELOG.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\test_email\data\msg_42.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\sndhdrdata\README.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\gbk-utf8.txt" />
+    <None Include="Assets\XLua\Resources\tdr\tdr.lua.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\johab.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\setuptools-2.1.dist-info\top_level.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\crashers\README.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\test\cjkencodings\big5hkscs-utf8.txt" />
+    <None Include="Assets\XLua\Tutorial\TODOTest\Resources\xls2lua\Lib\site-packages\README.txt" />
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>/Users/apple/Documents/unity_study/xlua/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>/Users/apple/Documents/unity_study/xlua/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.BaselibModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CloudWebServicesModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CloudWebServicesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.FacebookModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.FacebookModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticlesLegacyModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTrackingModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpatialTrackingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TimelineModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WebModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Locator">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/Managed/Unity.Locator.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook.Unity.Settings">
+      <HintPath>/Users/apple/Documents/unity_study/xlua/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>/Users/apple/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>/Users/apple/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StandardEvents">
+      <HintPath>/Users/apple/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript.Lang">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>/Applications/Unity2018/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -452,5 +544,34 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity2018/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity2018/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity2018/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity2018/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity2018/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity2018/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

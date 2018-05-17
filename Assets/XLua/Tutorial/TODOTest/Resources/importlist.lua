@@ -5,6 +5,4 @@ package.path = package.path .. ';..\\ui\\?.lua'
 -- print("233333333333333")
 -- print("int importlist.lua")
 require("classdefine")
-require("test2")
-require("sub.test4")
 -- print(">>>>>>>>>>>>>>>>>>>>>in importlist")

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
+
 using System.IO;
 using UnityEngine;
 using XLua;
@@ -39,8 +41,12 @@ public class ToDoTest : MonoBehaviour {
     {
         Debug.Log("LuaClient Awake !!!");
         luaEnv = new LuaEnv();
+        luaEnv.AddBuildin("rapidjson", LuaAPI.LoadRapidJson);
+        // luaEnv.AddBuildin("") 
+        // LuaAPI.ikcp_check(10, 123);
         instance = this;
         DontDestroyOnLoad(gameObject);
+        // luaEnv.AddBuildin("rapidjson", XLua.LuaDLL.Lua.LoadRapidJson);
     }
 
 
@@ -138,6 +144,7 @@ public class ToDoTest : MonoBehaviour {
         //加载这个文件，进而加载一系列的lua文件。
         luaEnv.DoString("require('importlist')");
         luaEnv.DoString("require('init')");
+        luaEnv.DoString("require('module')");
         CallLuaFunc("init");
         CallLuaFunc("start");
         luaEnv.DoString("require('app.main')");

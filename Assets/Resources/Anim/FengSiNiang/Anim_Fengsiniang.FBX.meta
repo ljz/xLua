@@ -1,0 +1,466 @@
+fileFormatVersion: 2
+guid: 34623794167ed304ea54a3af293cbb43
+timeCreated: 1522241101
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: Bip001 Head
+    100004: Bip001 L Calf
+    100006: Bip001 L Clavicle
+    100008: Bip001 L Finger0
+    100010: Bip001 L Finger01
+    100012: Bip001 L Finger02
+    100014: Bip001 L Finger1
+    100016: Bip001 L Finger11
+    100018: Bip001 L Finger12
+    100020: Bip001 L Finger2
+    100022: Bip001 L Finger21
+    100024: Bip001 L Finger22
+    100026: Bip001 L Finger3
+    100028: Bip001 L Finger31
+    100030: Bip001 L Finger32
+    100032: Bip001 L Finger4
+    100034: Bip001 L Finger41
+    100036: Bip001 L Finger42
+    100038: Bip001 L Foot
+    100040: Bip001 L Forearm
+    100042: Bip001 L Hand
+    100044: Bip001 L Thigh
+    100046: Bip001 L Toe0
+    100048: Bip001 L UpperArm
+    100050: Bip001 Neck
+    100052: Bip001 Pelvis
+    100054: Bip001 R Calf
+    100056: Bip001 R Clavicle
+    100058: Bip001 R Finger0
+    100060: Bip001 R Finger01
+    100062: Bip001 R Finger02
+    100064: Bip001 R Finger1
+    100066: Bip001 R Finger11
+    100068: Bip001 R Finger12
+    100070: Bip001 R Finger2
+    100072: Bip001 R Finger21
+    100074: Bip001 R Finger22
+    100076: Bip001 R Finger3
+    100078: Bip001 R Finger31
+    100080: Bip001 R Finger32
+    100082: Bip001 R Finger4
+    100084: Bip001 R Finger41
+    100086: Bip001 R Finger42
+    100088: Bip001 R Foot
+    100090: Bip001 R Forearm
+    100092: Bip001 R Hand
+    100094: Bip001 R Thigh
+    100096: Bip001 R Toe0
+    100098: Bip001 R UpperArm
+    100100: Bip001 Spine
+    100102: Bip001 Spine1
+    100104: Bip001 Spine2
+    100106: Bone002
+    100108: Bone003
+    100110: Bone004
+    100112: Bone005
+    100114: Bone007
+    100116: Bone008
+    100118: Bone009
+    100120: Bone010
+    100122: Bone012
+    100124: Bone013
+    100126: Bone014
+    100128: Bone015
+    100130: Bone016
+    100132: Bone017
+    100134: Bone019
+    100136: Bone020
+    100138: Bone021
+    100140: Bone023
+    100142: Bone024
+    100144: Bone025
+    100146: Bone027
+    100148: Bone028
+    100150: Bone030
+    100152: Bone031
+    100154: Bone032
+    100156: Bone033
+    100158: Bone035
+    100160: Bone037
+    100162: Bone039
+    100164: Bone040
+    100166: Bone041
+    100168: Bone042
+    100170: Bone043
+    100172: Bone054
+    100174: Bone055
+    100176: Bone056
+    100178: Bone057
+    100180: Bone058
+    100182: Bone059
+    100184: Bone061
+    100186: Bone063
+    100188: Bone064
+    100190: Bone065
+    100192: Bone066
+    100194: Bone067
+    100196: Bone068
+    100198: Bone069
+    100200: Bone071
+    100202: Bone072
+    100204: Bone073
+    100206: Bone074
+    100208: Bone076
+    100210: Bone077
+    100212: Bone078
+    100214: Bone079
+    100216: Bone081
+    100218: Bone082
+    100220: Bone083
+    100222: Bone084
+    100224: Bone085
+    100226: Bone086
+    100228: Bone088
+    100230: Bone089
+    100232: Bone090
+    100234: Bone091
+    100236: Bone092
+    100238: Bone093
+    100240: Bone094
+    100242: Bone095
+    100244: Bone096
+    100246: Bone097
+    100248: Bone099
+    100250: Bone100
+    100252: Bone101
+    100254: Bone103
+    100256: Bone105
+    100258: Bone106
+    100260: Bone108
+    100262: Bone110
+    100264: Bone112
+    100266: Bone113
+    100268: Bone114
+    100270: Bone115
+    100272: Bone116
+    100274: Bone117
+    100276: Bone118
+    100278: Dummy001
+    100280: //RootNode
+    100282: m_fsn_01
+    100284: m_fsn_weapon_002
+    100286: m_fsn_weapon_01
+    100288: Position
+    100290: m_fsn_weapon_02
+    100292: Bone119
+    100294: Bone121
+    100296: Bone122
+    100298: Bone123
+    100300: Bone124
+    100302: Bone125
+    100304: Bone126
+    100306: Bone127
+    100308: Bone128
+    100310: Bone129
+    100312: Bone130
+    100314: Bone131
+    100316: Bone132
+    100318: Bone133
+    100320: Bone135
+    100322: Bone137
+    100324: Bone138
+    100326: Bone139
+    100328: Bone140
+    100330: Bone141
+    100332: Bone142
+    100334: Bone143
+    100336: Bone144
+    400000: Bip001
+    400002: Bip001 Head
+    400004: Bip001 L Calf
+    400006: Bip001 L Clavicle
+    400008: Bip001 L Finger0
+    400010: Bip001 L Finger01
+    400012: Bip001 L Finger02
+    400014: Bip001 L Finger1
+    400016: Bip001 L Finger11
+    400018: Bip001 L Finger12
+    400020: Bip001 L Finger2
+    400022: Bip001 L Finger21
+    400024: Bip001 L Finger22
+    400026: Bip001 L Finger3
+    400028: Bip001 L Finger31
+    400030: Bip001 L Finger32
+    400032: Bip001 L Finger4
+    400034: Bip001 L Finger41
+    400036: Bip001 L Finger42
+    400038: Bip001 L Foot
+    400040: Bip001 L Forearm
+    400042: Bip001 L Hand
+    400044: Bip001 L Thigh
+    400046: Bip001 L Toe0
+    400048: Bip001 L UpperArm
+    400050: Bip001 Neck
+    400052: Bip001 Pelvis
+    400054: Bip001 R Calf
+    400056: Bip001 R Clavicle
+    400058: Bip001 R Finger0
+    400060: Bip001 R Finger01
+    400062: Bip001 R Finger02
+    400064: Bip001 R Finger1
+    400066: Bip001 R Finger11
+    400068: Bip001 R Finger12
+    400070: Bip001 R Finger2
+    400072: Bip001 R Finger21
+    400074: Bip001 R Finger22
+    400076: Bip001 R Finger3
+    400078: Bip001 R Finger31
+    400080: Bip001 R Finger32
+    400082: Bip001 R Finger4
+    400084: Bip001 R Finger41
+    400086: Bip001 R Finger42
+    400088: Bip001 R Foot
+    400090: Bip001 R Forearm
+    400092: Bip001 R Hand
+    400094: Bip001 R Thigh
+    400096: Bip001 R Toe0
+    400098: Bip001 R UpperArm
+    400100: Bip001 Spine
+    400102: Bip001 Spine1
+    400104: Bip001 Spine2
+    400106: Bone002
+    400108: Bone003
+    400110: Bone004
+    400112: Bone005
+    400114: Bone007
+    400116: Bone008
+    400118: Bone009
+    400120: Bone010
+    400122: Bone012
+    400124: Bone013
+    400126: Bone014
+    400128: Bone015
+    400130: Bone016
+    400132: Bone017
+    400134: Bone019
+    400136: Bone020
+    400138: Bone021
+    400140: Bone023
+    400142: Bone024
+    400144: Bone025
+    400146: Bone027
+    400148: Bone028
+    400150: Bone030
+    400152: Bone031
+    400154: Bone032
+    400156: Bone033
+    400158: Bone035
+    400160: Bone037
+    400162: Bone039
+    400164: Bone040
+    400166: Bone041
+    400168: Bone042
+    400170: Bone043
+    400172: Bone054
+    400174: Bone055
+    400176: Bone056
+    400178: Bone057
+    400180: Bone058
+    400182: Bone059
+    400184: Bone061
+    400186: Bone063
+    400188: Bone064
+    400190: Bone065
+    400192: Bone066
+    400194: Bone067
+    400196: Bone068
+    400198: Bone069
+    400200: Bone071
+    400202: Bone072
+    400204: Bone073
+    400206: Bone074
+    400208: Bone076
+    400210: Bone077
+    400212: Bone078
+    400214: Bone079
+    400216: Bone081
+    400218: Bone082
+    400220: Bone083
+    400222: Bone084
+    400224: Bone085
+    400226: Bone086
+    400228: Bone088
+    400230: Bone089
+    400232: Bone090
+    400234: Bone091
+    400236: Bone092
+    400238: Bone093
+    400240: Bone094
+    400242: Bone095
+    400244: Bone096
+    400246: Bone097
+    400248: Bone099
+    400250: Bone100
+    400252: Bone101
+    400254: Bone103
+    400256: Bone105
+    400258: Bone106
+    400260: Bone108
+    400262: Bone110
+    400264: Bone112
+    400266: Bone113
+    400268: Bone114
+    400270: Bone115
+    400272: Bone116
+    400274: Bone117
+    400276: Bone118
+    400278: Dummy001
+    400280: //RootNode
+    400282: m_fsn_01
+    400284: m_fsn_weapon_002
+    400286: m_fsn_weapon_01
+    400288: Position
+    400290: m_fsn_weapon_02
+    400292: Bone119
+    400294: Bone121
+    400296: Bone122
+    400298: Bone123
+    400300: Bone124
+    400302: Bone125
+    400304: Bone126
+    400306: Bone127
+    400308: Bone128
+    400310: Bone129
+    400312: Bone130
+    400314: Bone131
+    400316: Bone132
+    400318: Bone133
+    400320: Bone135
+    400322: Bone137
+    400324: Bone138
+    400326: Bone139
+    400328: Bone140
+    400330: Bone141
+    400332: Bone142
+    400334: Bone143
+    400336: Bone144
+    2100000: 01 - Default
+    2100002: m_fsn_01
+    4300000: m_fsn_01
+    4300002: m_fsn_weapon_01
+    4300004: m_fsn_weapon_002
+    4300006: m_fsn_weapon_02
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: m_fsn_01
+    13700002: m_fsn_weapon_002
+    13700004: m_fsn_weapon_01
+    13700006: m_fsn_weapon_02
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 1
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

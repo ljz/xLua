@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="external">
+      <UniqueIdentifier>{0ee1d2d4-51c0-4143-ab55-d75dd6621734}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\openssl">
+      <UniqueIdentifier>{87e14722-8f62-4da8-8ffd-24e08283e9ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="external\snappy">
+      <UniqueIdentifier>{c3afe291-2647-4e9e-b0b0-0844823b6dfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{c9f07058-2f13-46b4-8607-816380179de8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\lua-bindings">
+      <UniqueIdentifier>{8329b44c-eda1-435f-b91a-5c0212883d2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\pigeon">
+      <UniqueIdentifier>{9eedf681-f76c-405a-af30-4fc9eeaba307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\lua-bindings\manual">
+      <UniqueIdentifier>{55fa6330-a9ae-46ce-94b9-c394e4ef1446}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\kcp">
+      <UniqueIdentifier>{6fe5267c-4b49-4758-bf0a-d46d82b1e0c7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\external\snappy\android\snappy-sinksource.cc">
+      <Filter>external\snappy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\snappy\android\snappy-stubs-internal.cc">
+      <Filter>external\snappy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\snappy\android\snappy.cc">
+      <Filter>external\snappy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\external\snappy\android\snappy-c.cc">
+      <Filter>external\snappy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\AESCrypto.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\Deserializer.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\MessageProtocol.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\NetActivity.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\NetController.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\RPCTransport.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\RSACrypto.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\Serializer.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\SessionClient.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\SessionListener.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\SessionSelector.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\SessionServer.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\SymmCryptoFactory.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\TimeCorrector.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\pigeon\utils.cpp">
+      <Filter>Classes\pigeon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\kcp\CommunicationWork.cpp">
+      <Filter>Classes\kcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\kcp\ikcp.c">
+      <Filter>Classes\kcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\kcp\UDPDataUtils.cpp">
+      <Filter>Classes\kcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\kcp\UDPServer.cpp">
+      <Filter>Classes\kcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\kcp\UDPSocket.cpp">
+      <Filter>Classes\kcp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\lua-bindings\manual\lua_kcp.cpp">
+      <Filter>Classes\lua-bindings\manual</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Classes\lua-bindings\manual\lua_pigeon.cpp">
+      <Filter>Classes\lua-bindings\manual</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\external\openssl\include\openssl\aes.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\asn1.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\asn1_mac.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\asn1t.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\bio.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\blowfish.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\bn.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\buffer.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\camellia.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\cast.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\cmac.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\cms.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\comp.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\conf.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\conf_api.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\crypto.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\des.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\des_old.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\dh.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\dsa.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\dso.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\dtls1.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\e_os2.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ebcdic.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ec.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ecdh.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ecdsa.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\engine.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\err.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\evp.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\hmac.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\idea.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\krb5_asn.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\kssl.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\lhash.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\md4.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\md5.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\mdc2.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\modes.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\obj_mac.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\objects.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ocsp.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\opensslconf.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\opensslv.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ossl_typ.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\pem.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\pem2.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\pkcs7.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\pkcs12.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\pqueue.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\rand.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\rc2.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\rc4.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ripemd.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\rsa.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\safestack.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\seed.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\sha.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\srp.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\srtp.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ssl.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ssl2.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ssl3.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ssl23.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\stack.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\symhacks.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\tls1.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ts.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\txt_db.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ui.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\ui_compat.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\whrlpool.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\x509.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\x509_vfy.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\openssl\include\openssl\x509v3.h">
+      <Filter>external\openssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\snappy\android\snappy-sinksource.h">
+      <Filter>external\snappy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\snappy\android\snappy-stubs-internal.h">
+      <Filter>external\snappy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\snappy\android\snappy-stubs-public.h">
+      <Filter>external\snappy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\snappy\android\snappy.h">
+      <Filter>external\snappy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\snappy\android\snappy-c.h">
+      <Filter>external\snappy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\external\snappy\android\snappy-internal.h">
+      <Filter>external\snappy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\pigeon\Deserializer.h">
+      <Filter>Classes\pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\pigeon\NetActivity.h">
+      <Filter>Classes\pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\pigeon\netbasic.h">
+      <Filter>Classes\pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\pigeon\NetController.h">
+      <Filter>Classes\pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\pigeon\NetCrypto.h">
+      <Filter>Classes\pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\pigeon\pigeon.h">
+      <Filter>Classes\pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\pigeon\RPCTransport.h">
+      <Filter>Classes\pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\pigeon\Serializer.h">
+      <Filter>Classes\pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\pigeon\SessionActor.h">
+      <Filter>Classes\pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\pigeon\SessionSelector.h">
+      <Filter>Classes\pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\pigeon\TimeCorrector.h">
+      <Filter>Classes\pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\pigeon\define.h">
+      <Filter>Classes\pigeon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\kcp\CommunicationWork.hpp">
+      <Filter>Classes\kcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\kcp\ikcp.h">
+      <Filter>Classes\kcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\kcp\UDPDataUtils.h">
+      <Filter>Classes\kcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\kcp\UDPProtocol.h">
+      <Filter>Classes\kcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\kcp\UDPServer.h">
+      <Filter>Classes\kcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\kcp\UDPSocket.h">
+      <Filter>Classes\kcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\lua-bindings\manual\lua_kcp.hpp">
+      <Filter>Classes\lua-bindings\manual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Classes\lua-bindings\manual\lua_pigeon.h">
+      <Filter>Classes\lua-bindings\manual</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\external\snappy\android\snappy-stubs-public.h.in">
+      <Filter>external\snappy</Filter>
+    </None>
+  </ItemGroup>
+</Project>

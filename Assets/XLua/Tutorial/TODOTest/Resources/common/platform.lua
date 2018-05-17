@@ -1,5 +1,4 @@
-print("in platform 1111111111111")
- EPlatformType = {
+EPlatformType = {
     OSXEditor = 0,
     OSXPlayer = 1,
     WindowsPlayer = 2,
@@ -37,11 +36,9 @@ print("in platform 1111111111111")
 }
 
 local DefaultType = -1
-print("in platform 2222222222222222222222")
 gIsMobile = DefaultType
 gIsEditor = DefaultType
 gPlatformType = DefaultType
-print("in platform 33333333333333333333333333")
 function IsMobile()
     if IsClientAgent() then
         return false
@@ -52,7 +49,6 @@ function IsMobile()
 	return gIsMobile
 end
 
-print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>zhe li ding yi le IsEditor")
 
 function IsEditor()
     if IsClientAgent() then

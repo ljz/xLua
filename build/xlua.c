@@ -22,6 +22,8 @@
 #include "lstate.h"
 #endif
 
+extern int luaopen_kcp_udp(lua_State* l);
+extern int luaopen_tcp(lua_State* l);
 /*
 ** stdcall C function support
 */
@@ -1235,5 +1237,8 @@ LUA_API void luaopen_xlua(lua_State *L) {
 	luaL_register(L, "xlua", xlualib);
     lua_pop(L, 1);
 #endif
+
+//	luaopen_tcp(L);
+//	luaopen_kcp_udp(L);
 }
 

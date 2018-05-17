@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{95BDA3C2-4244-4CB6-AAA4-414DD3D350E5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>kakura</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\cocos2d-x\cocos\2d\cocos2d_headers.props" />
+    <Import Project="..\..\..\cocos2d-x\cocos\2d\cocos2dx.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\cocos2d-x\cocos\2d\cocos2d_headers.props" />
+    <Import Project="..\..\..\cocos2d-x\cocos\2d\cocos2dx.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration).win32\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_WINDOWS;_WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(EngineRoot)cocos\extend\lua-bindings\manual;$(EngineRoot)cocos;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\lua\lua;$(EngineRoot)external\openssl\include\win32;$(EngineRoot);$(EngineRoot)cocos\platform\win32;$(EngineRoot)external\win32-specific\gles;$(EngineRoot)external\win32-specific\gles\include\OGLES;$(EngineRoot)external\glfw3\include\win32;$(EngineRoot)external\win32-specific\zlib\include;$(ProjectDir)..\..\Classes\pigeon;$(ProjectDir)..\..\Classes;$(ProjectDir)..\..\external\snappy\include;$(ProjectDir)..\..\..\external\openssl\include\win32;$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\include;$(ProjectDir)..\..\Classes\kcp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+    <Lib>
+      <AdditionalLibraryDirectories>$(EngineRoot)\..\external\curl\prebuilt\win32;$(EngineRoot)\..\external\openssl\prebuilt\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <PreLinkEvent>
+      <Command>if not exist "$(OutDir)" mkdir "$(OutDir)"
+xcopy /Y /Q "$(ProjectDir)..\..\..\external\openssl\prebuilt\win32\*.*" "$(OutDir)"</Command>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\cocos2d-x\cocos\extend\lua-bindings\manual;$(ProjectDir)..\..\..\cocos2d-x\cocos;$(ProjectDir)..\..\..\cocos2d-x\external\lua\tolua;$(ProjectDir)..\..\..\cocos2d-x\external\lua\lua;$(ProjectDir)..\..\..\cocos2d-x;$(ProjectDir)..\..\kakura;$(ProjectDir)..\..\..\cocos2d-x\cocos\platform\win32;$(ProjectDir)..\..\..\cocos2d-x\external\win32-specific\gles;$(ProjectDir)..\..\..\cocos2d-x\external\win32-specific\gles\include\OGLES;$(ProjectDir)..\..\..\cocos2d-x\external\glfw3\include\win32;$(ProjectDir)..\..\..\cocos2d-x\external\win32-specific\zlib\include;$(ProjectDir)..\..\kakura\dbmanager;$(ProjectDir)..\..\kakura\config;$(ProjectDir)..\..\kakura\cjson;$(ProjectDir)..\..\..\cocos2d-x\external\openssl\include\win32;$(ProjectDir)..\..\..\pigeon\src;$(ProjectDir)..\..\..\pigeon\external\snappy\android;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Classes\kcp\CommunicationWork.cpp" />
+    <ClCompile Include="..\..\Classes\kcp\ikcp.c" />
+    <ClCompile Include="..\..\Classes\kcp\UDPDataUtils.cpp" />
+    <ClCompile Include="..\..\Classes\kcp\UDPServer.cpp" />
+    <ClCompile Include="..\..\Classes\kcp\UDPSocket.cpp" />
+    <ClCompile Include="..\..\Classes\lua-bindings\manual\lua_kcp.cpp" />
+    <ClCompile Include="..\..\Classes\lua-bindings\manual\lua_pigeon.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\AESCrypto.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\Deserializer.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\MessageProtocol.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\NetActivity.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\NetController.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\RPCTransport.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\RSACrypto.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\Serializer.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\SessionClient.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\SessionListener.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\SessionSelector.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\SessionServer.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\SymmCryptoFactory.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\TimeCorrector.cpp" />
+    <ClCompile Include="..\..\Classes\pigeon\utils.cpp" />
+    <ClCompile Include="..\..\external\snappy\android\snappy-c.cc" />
+    <ClCompile Include="..\..\external\snappy\android\snappy-sinksource.cc" />
+    <ClCompile Include="..\..\external\snappy\android\snappy-stubs-internal.cc" />
+    <ClCompile Include="..\..\external\snappy\android\snappy.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Classes\kcp\CommunicationWork.hpp" />
+    <ClInclude Include="..\..\Classes\kcp\ikcp.h" />
+    <ClInclude Include="..\..\Classes\kcp\UDPDataUtils.h" />
+    <ClInclude Include="..\..\Classes\kcp\UDPProtocol.h" />
+    <ClInclude Include="..\..\Classes\kcp\UDPServer.h" />
+    <ClInclude Include="..\..\Classes\kcp\UDPSocket.h" />
+    <ClInclude Include="..\..\Classes\lua-bindings\manual\lua_kcp.hpp" />
+    <ClInclude Include="..\..\Classes\lua-bindings\manual\lua_pigeon.h" />
+    <ClInclude Include="..\..\Classes\pigeon\define.h" />
+    <ClInclude Include="..\..\Classes\pigeon\Deserializer.h" />
+    <ClInclude Include="..\..\Classes\pigeon\NetActivity.h" />
+    <ClInclude Include="..\..\Classes\pigeon\netbasic.h" />
+    <ClInclude Include="..\..\Classes\pigeon\NetController.h" />
+    <ClInclude Include="..\..\Classes\pigeon\NetCrypto.h" />
+    <ClInclude Include="..\..\Classes\pigeon\pigeon.h" />
+    <ClInclude Include="..\..\Classes\pigeon\RPCTransport.h" />
+    <ClInclude Include="..\..\Classes\pigeon\Serializer.h" />
+    <ClInclude Include="..\..\Classes\pigeon\SessionActor.h" />
+    <ClInclude Include="..\..\Classes\pigeon\SessionSelector.h" />
+    <ClInclude Include="..\..\Classes\pigeon\TimeCorrector.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\aes.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\asn1.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\asn1t.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\asn1_mac.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\bio.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\blowfish.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\bn.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\buffer.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\camellia.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\cast.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\cmac.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\cms.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\comp.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\conf.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\conf_api.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\crypto.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\des.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\des_old.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\dh.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\dsa.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\dso.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\dtls1.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ebcdic.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ec.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ecdh.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ecdsa.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\engine.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\err.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\evp.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\e_os2.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\hmac.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\idea.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\krb5_asn.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\kssl.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\lhash.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\md4.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\md5.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\mdc2.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\modes.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\objects.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\obj_mac.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ocsp.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\opensslconf.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\opensslv.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ossl_typ.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\pem.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\pem2.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\pkcs12.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\pkcs7.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\pqueue.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\rand.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\rc2.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\rc4.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ripemd.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\rsa.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\safestack.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\seed.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\sha.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\srp.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\srtp.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ssl.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ssl2.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ssl23.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ssl3.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\stack.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\symhacks.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\tls1.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ts.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\txt_db.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ui.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\ui_compat.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\whrlpool.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\x509.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\x509v3.h" />
+    <ClInclude Include="..\..\external\openssl\include\openssl\x509_vfy.h" />
+    <ClInclude Include="..\..\external\snappy\android\snappy-c.h" />
+    <ClInclude Include="..\..\external\snappy\android\snappy-internal.h" />
+    <ClInclude Include="..\..\external\snappy\android\snappy-sinksource.h" />
+    <ClInclude Include="..\..\external\snappy\android\snappy-stubs-internal.h" />
+    <ClInclude Include="..\..\external\snappy\android\snappy-stubs-public.h" />
+    <ClInclude Include="..\..\external\snappy\android\snappy.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\external\snappy\android\snappy-stubs-public.h.in" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

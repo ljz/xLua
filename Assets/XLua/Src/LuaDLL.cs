@@ -38,10 +38,156 @@ namespace XLua.LuaDLL
 #else
         const string LUADLL = "xlua";
 #endif
+        [DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
+        public static extern int luaopen_rapidjson(System.IntPtr L);
+        [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        public static int LoadRapidJson(System.IntPtr L)
+        {
+            return luaopen_rapidjson(L);
+        }
+
+
+        [DllImport(LUADLL, CallingConvention=CallingConvention.Cdecl)]
+        public static extern uint ikcp_check(IntPtr kcp, uint current);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static int Loadikcp_check(IntPtr kcp, uint current)
+        // {
+        //     return ikcp_check(kcp, current);
+        // }
+
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern IntPtr ikcp_create(uint conv, IntPtr user);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static int Loadikcp_create(uint conv, IntPtr user)
+        // {
+        //     return ikcp_create(conv, user);
+        // }
+
+
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern void ikcp_flush(IntPtr kcp);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static void Loadikcp_flush(IntPtr kcp)
+        // {
+        //     ikcp_flush(kcp);
+        // }
+
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern uint ikcp_getconv(IntPtr ptr);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static int Loadikcp_getconv(IntPtr ptr)
+        // {
+        //     return ikcp_getconv(ptr);
+        // }
+
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern int ikcp_input(IntPtr kcp, byte[] data, long size);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static int Loadikcp_input(IntPtr kcp, byte[] data, long size)
+        // {
+        //     return ikcp_input(kcp, data, size);
+        // }
+
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern int ikcp_nodelay(IntPtr kcp, int nodelay, int interval, int resend, int nc);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static int Loadikcp_nodelay(IntPtr kcp, int nodelay, int interval, int resend, int nc)
+        // {
+        //     return ikcp_nodelay( kcp,  nodelay,  interval,  resend,  nc);
+        // }
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern int ikcp_peeksize(IntPtr kcp);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static int Loadikcp_peeksize(IntPtr kcp)
+        // {
+        //     return ikcp_peeksize(kcp);
+        // }
+
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern int ikcp_recv(IntPtr kcp, byte[] buffer, int len);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static int Loadikcp_recv(IntPtr kcp, byte[] buffer, int len)
+        // {
+        //     return ikcp_recv( kcp, buffer,  len);
+        // }
+
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern void ikcp_release(IntPtr kcp);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static void Loadikcp_release(IntPtr kcp)
+        // {
+        //     ikcp_release(kcp);
+        // }
+
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern int ikcp_send(IntPtr kcp, byte[] buffer, int len);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static int Loadikcp_send(IntPtr kcp, byte[] buffer, int len) 
+        // {
+        //     return ikcp_send( kcp, buffer,  len);
+        // }
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern void ikcp_setminrto(IntPtr ptr, int minrto);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static void Loadikcp_setminrto(IntPtr ptr, int minrto) 
+        // {
+        //      ikcp_setminrto( ptr, minrto);
+        // }
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern int ikcp_setmtu(IntPtr kcp, int mtu);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static int Loadikcp_setmtu(IntPtr kcp, int mtu) 
+        // {
+        //     return ikcp_setmtu( kcp,  mtu);
+        // }
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern void ikcp_setoutput(IntPtr kcp, kcp_output output);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static void Loadikcp_setoutput(IntPtr kcp, kcp_output output) 
+        // {
+        //     ikcp_setoutput( kcp,  output);
+        // }    
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern void ikcp_update(IntPtr kcp, uint current);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static void Loadikcp_update(IntPtr kcp, uint current)
+        // {
+        //     ikcp_update(kcp, current);
+        // } 
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern int ikcp_waitsnd(IntPtr kcp);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static int Loadikcp_waitsnd(IntPtr kcp)
+        // {
+        //     return ikcp_waitsnd(kcp);
+        // }
+
+        // [DllImport(KcpDLL, CallingConvention=CallingConvention.Cdecl)]
+        // public static extern int ikcp_wndsize(IntPtr kcp, int sndwnd, int rcvwnd);
+        // [MonoPInvokeCallback(typeof(LuaDLL.lua_CSFunction))]
+        // public static int Loadikcp_wndsize(IntPtr kcp, int sndwnd, int rcvwnd)
+        // { 
+        //     return ikcp_wndsize( kcp,  sndwnd,  rcvwnd);
+        // } 
+
 
         [DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
         public static extern IntPtr lua_tothread(IntPtr L, int index);
-
+        
         [DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
 		public static extern int xlua_get_lib_version();
 
@@ -282,7 +428,7 @@ namespace XLua.LuaDLL
         [DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
         public static extern void xlua_pushuint(IntPtr L, uint value);
 
-        public static void lua_pushstring(IntPtr L, string str) //ÒµÎñÊ¹ÓÃ
+        public static void lua_pushstring(IntPtr L, string str) //Òµï¿½ï¿½Ê¹ï¿½ï¿½
         {
             if (str == null)
             {
@@ -518,7 +664,7 @@ namespace XLua.LuaDLL
         //[DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
         //public static extern void xlua_pushbuffer(IntPtr L, byte[] buff);
 
-        //¶ÔÓÚUnity£¬½ö¸¡µã×é³ÉµÄstruct½Ï¶à£¬Õâ¼¸¸öapiÓÃÓÚÓÅ»¯ÕâÀàstruct
+        //ï¿½ï¿½ï¿½ï¿½Unityï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Éµï¿½structï¿½Ï¶à£¬ï¿½â¼¸ï¿½ï¿½apiï¿½ï¿½ï¿½ï¿½ï¿½Å»ï¿½ï¿½ï¿½ï¿½ï¿½struct
         [DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
         public static extern bool xlua_pack_float2(IntPtr buff, int offset, float f1, float f2);
         [DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
