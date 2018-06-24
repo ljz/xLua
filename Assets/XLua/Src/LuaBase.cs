@@ -4,6 +4,10 @@
  * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
  * http://opensource.org/licenses/MIT
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+ * Lua中对象对应C#中对象的一个基类，
+ * 业务代码中高频使用的LuaFunction，LuaTable，LuaThread均继承自这个类。
+ * 主要作用是有一个reference指向lua里面的对象，引用计数判断两个对象是否相等等。
+ *比如LuaFunction里面的reference是指向lua里面的一个闭包的，而LuaTable的reference是指向lua中的一个table的。
 */
 
 #if USE_UNI_LUA

@@ -22,7 +22,6 @@ XLua目前内置的扩展库：
 ### 一、添加扩展&编译
 
 准备工作
-
 1. 把xLua的C源码包解压到你Unity工程的Assets同级目录下。
 
     下载lua-rapidjson代码，按你的习惯放置。本教程是把rapidjson头文件放到$UnityProj\build\lua-rapidjson\include目录下，而扩展的源码rapidjson.cpp放到$UnityProj\build\lua-rapidjson\source目录下（注：$UnityProj指的是你工程的目录）

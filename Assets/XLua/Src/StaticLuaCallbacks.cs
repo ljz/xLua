@@ -384,6 +384,7 @@ namespace XLua
         }
 
 
+        //原始数组设置
         public static bool TryPrimitiveArraySet(Type type, RealStatePtr L, object obj, int array_idx, int obj_idx)
         {
             bool ok = true;
@@ -831,6 +832,7 @@ namespace XLua
         }
 
 
+        //MonoPInvokeCallback:可以回调
         [MonoPInvokeCallback(typeof(LuaCSFunction))]
         public static int ImportType(RealStatePtr L)
         {
@@ -888,7 +890,7 @@ namespace XLua
                 return LuaAPI.luaL_error(L, "c# exception in xlua.cast:" + e);
             }
         }
-
+        //得到类型,参数是:栈; 对象转换器,索引号
         static Type getType(RealStatePtr L, ObjectTranslator translator, int idx)
         {
             if (LuaAPI.lua_type(L, idx) == LuaTypes.LUA_TTABLE)
@@ -995,6 +997,7 @@ namespace XLua
         }
 
         [MonoPInvokeCallback(typeof(LuaCSFunction))]
+        //lua元表操作
         public static int XLuaMetatableOperation(RealStatePtr L)
         {
             try
@@ -1039,11 +1042,14 @@ namespace XLua
         }
 
         [MonoPInvokeCallback(typeof(LuaCSFunction))]
+        //代理构造器
         public static int DelegateConstructor(RealStatePtr L)
         {
             try
             {
+                //每个指针在对象转换器池子中都可以找到对应的转换器.
                 ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
+                
                 Type type = getType(L, translator, 1);
                 if (type == null || !typeof(Delegate).IsAssignableFrom(type))
                 {
@@ -1059,17 +1065,29 @@ namespace XLua
         }
 
         [MonoPInvokeCallback(typeof(LuaCSFunction))]
+        //转换为function
+        //将RealStatePtr对象转换得到一个int
+        //最后这个函数ToFunction是被推到lua栈中了,lua栈就可以用了.
+        //这个是导出给lua虚拟机里面,lua虚拟机就好使用.
+        //具体做的事情就是:根据类型生成一个Lua可以调用的函数对象.
         public static int ToFunction(RealStatePtr L)
         {
             try
             {
+                //从对象转换器池里面找到这个真实状态指针的对象转换器
                 ObjectTranslator translator = ObjectTranslatorPool.Instance.Find(L);
                 MethodBase m;
+                //然后用这个状态转换器得到这个状态指针的第一个元素(从lua状态栈里卖弄去获取).第一个参数是MethodBase
                 translator.Get(L, 1, out m);
+                //如果获取到的是一个null,就提示说ToFunction的参数必须是方法
                 if (m == null)
                 {
                     return LuaAPI.luaL_error(L, "ToFunction: #1 argument must be a MethodBase");
                 }
+                //正常情况则:根据转换器的方法缓存中的生成方法wraper接口根据这个方法声明类型,名字等信息创建一个wraper
+                //然后用这个wraper生成一个LuaCSFunction.
+                //并且推到Lua虚拟机里面去.
+                //这样子才能够在lua端调用他.
                 translator.PushFixCSFunction(L,
                         new LuaCSFunction(translator.methodWrapsCache._GenMethodWrap(m.DeclaringType, m.Name, new MethodBase[] { m }).Call));
                 return 1;
@@ -1080,6 +1098,7 @@ namespace XLua
             }
         }
 
+        //释放CS对象,在Lua端释放????
         [MonoPInvokeCallback(typeof(LuaCSFunction))]
         public static int ReleaseCsObject(RealStatePtr L)
         {

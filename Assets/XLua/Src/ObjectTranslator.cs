@@ -6,6 +6,16 @@
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 */
 
+/*
+ *这个类代码不多，
+ * 它存在的主要意义就是给lua中对C#对象的交互提供了基础，
+ * 简单来说就是C#中的对象在传给lua时并不是直接把对象暴露给了lua，
+ * 而是在这个OjbectTranslator里面注册并返回一个索引（可以理解为windows编程中的句柄），
+ * 并把这个索引包装成一个userdata传递给lua，
+ * 并且设置元表。
+ *
+ * 
+ */
 #if USE_UNI_LUA
 using LuaAPI = UniLua.Lua;
 using RealStatePtr = UniLua.ILuaState;
@@ -26,19 +36,25 @@ namespace XLua
     using System.Diagnostics;
     using System.Linq;
 
+    //反射相等比较
     class ReferenceEqualsComparer : IEqualityComparer<object>
     {
         public new bool Equals(object o1, object o2)
         {
+            //比较两个对象的反射是否相等.
             return object.ReferenceEquals(o1, o2);
         }
+        //得到一个对象的hash值
         public int GetHashCode(object obj)
         {
+            //系统的运行时的编译器的运行时帮助器的获取哈希值接口
             return System.Runtime.CompilerServices.RuntimeHelpers.GetHashCode(obj);
         }
     }
 
 #pragma warning disable 414
+    //Mono调用回调属性类
+    //这种属性有一个回调函数.调用完这种属性之后会回调这个回调函数
     public class MonoPInvokeCallbackAttribute : System.Attribute
     {
         private Type type;
@@ -46,49 +62,58 @@ namespace XLua
     }
 #pragma warning restore 414
 
+    //lua的类型枚举
     public enum LuaTypes
     {
-        LUA_TNONE = -1,
-        LUA_TNIL = 0,
-        LUA_TNUMBER = 3,
-        LUA_TSTRING = 4,
-        LUA_TBOOLEAN = 1,
-        LUA_TTABLE = 5,
-        LUA_TFUNCTION = 6,
-        LUA_TUSERDATA = 7,
-        LUA_TTHREAD = 8,
-        LUA_TLIGHTUSERDATA = 2
+        LUA_TNONE = -1,//None
+        LUA_TNIL = 0,//nil
+        LUA_TNUMBER = 3,//number
+        LUA_TSTRING = 4,//string
+        LUA_TBOOLEAN = 1,//bool
+        LUA_TTABLE = 5,//table
+        LUA_TFUNCTION = 6,//function
+        LUA_TUSERDATA = 7,//userdata
+        LUA_TTHREAD = 8,//thread
+        LUA_TLIGHTUSERDATA = 2//lightuserdata
     }
 
+    //lua的gc选项
     public enum LuaGCOptions
     {
-        LUA_GCSTOP = 0,
-        LUA_GCRESTART = 1,
-        LUA_GCCOLLECT = 2,
-        LUA_GCCOUNT = 3,
-        LUA_GCCOUNTB = 4,
-        LUA_GCSTEP = 5,
-        LUA_GCSETPAUSE = 6,
-        LUA_GCSETSTEPMUL = 7,
+        LUA_GCSTOP = 0,//停止垃圾回收
+        LUA_GCRESTART = 1,//重新开始垃圾回收
+        LUA_GCCOLLECT = 2,//手机垃圾
+        LUA_GCCOUNT = 3,//垃圾数量
+        LUA_GCCOUNTB = 4,//
+        LUA_GCSTEP = 5,//垃圾回收的下一步
+        LUA_GCSETPAUSE = 6,//暂停当前步骤
+        LUA_GCSETSTEPMUL = 7,//设置当前步骤的参数
     }
 
+    //lua线程状态的枚举,就是线程现在是处于一个什么状态,可以是下面这些状态.
     public enum LuaThreadStatus
     {
+        //线程重置错误
         LUA_RESUME_ERROR = -1,
-        LUA_OK = 0,
-        LUA_YIELD = 1,
-        LUA_ERRRUN = 2,
-        LUA_ERRSYNTAX = 3,
-        LUA_ERRMEM = 4,
-        LUA_ERRERR = 5,
+        LUA_OK = 0,//O线程K状态
+        LUA_YIELD = 1,//线程协程的yield状态 
+        LUA_ERRRUN = 2,//运行时错误
+        LUA_ERRSYNTAX = 3,//语法错误
+        LUA_ERRMEM = 4,//成员错误
+        LUA_ERRERR = 5,//错误错误,什么鬼...
     }
 
+    //sealed:不能被继承,不知道为什么要搞一个class来包起来.
     sealed class LuaIndexes
     {
+        //lua注册索引,是一个attribute,可以设置和获取
+        //应该是记录lua栈当前注册到第几个了,类似一个全局唯一id.每次注册都增加一个之类的,用的其实是一个lua里面的东西
+        //只是在这里记录了一下,因为在C#里面会用到.
         public static int LUA_REGISTRYINDEX
         {
             get
             {
+                //默认是-1000,可以设置这个值.
                 return InternalGlobals.LUA_REGISTRYINDEX;
             }
             set
@@ -98,17 +123,23 @@ namespace XLua
         }
     }
 
+    //生成代码最小化
 #if GEN_CODE_MINIMIZE
     public delegate int CSharpWrapper(IntPtr L, int top);
 #endif
 
+    //对象转换器
     public partial class ObjectTranslator
 	{
+	    //方法导出接口的缓存.就是将需要导出的接口生成一个wraper文件之后,要缓存一下.
         internal MethodWrapsCache methodWrapsCache;
-        internal ObjectCheckers objectCheckers;
+        internal ObjectCheckers objectCheckers;//对象检测器
+	    //对象投射器
         internal ObjectCasters objectCasters;
+	    //上面这两个objectCheckers,objectCasters具体是做什么的,现在还不清楚.
 
         internal readonly ObjectPool objects = new ObjectPool();
+	    //这个字典,是什么鸡巴字典.参数是一个比较反射是否相等的对象.
         internal readonly Dictionary<object, int> reverseMap = new Dictionary<object, int>(new ReferenceEqualsComparer());
 		internal LuaEnv luaEnv;
 		internal StaticLuaCallbacks metaFunctions;
@@ -541,12 +572,15 @@ namespace XLua
                  typeof(System.MulticastDelegate), null, null);
         }
 
+	    //打开lib库,具体操作就是把下面这些接口推送到lua栈上面.这个对于lua层来说就有这些接口了.也就是打开了lib
 		public void OpenLib(RealStatePtr L)
 		{
+		    //xlua的获取全局的xlua这个变量
             if (0 != LuaAPI.xlua_getglobal(L, "xlua"))
             {
                 throw new Exception("call xlua_getglobal fail!" + LuaAPI.lua_tostring(L, -1));
             }
+		    //推送各种接口,并且有lua端调用的名字.有了这些信息之后lua去调用的时候就找得到对应的名字和对象了.
             LuaAPI.xlua_pushasciistring(L, "import_type");
 			LuaAPI.lua_pushstdcallcfunction(L,importTypeFunction);
 			LuaAPI.lua_rawset(L, -3);

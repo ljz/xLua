@@ -44,6 +44,7 @@ namespace XLua
             return !LuaAPI.lua_isnil(L, -1);
         }
 
+        //根据状态指针去获取到主状态机,应该是根据C#记录的这个状态指针去lua运行时环境中获取实际的那个环境.
         public static RealStatePtr GetMainState(RealStatePtr L)
         {
             RealStatePtr ret = default(RealStatePtr);

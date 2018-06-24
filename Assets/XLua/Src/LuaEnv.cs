@@ -71,6 +71,7 @@ namespace XLua
             lock(luaEnvLock)
             {
 #endif
+            //设置lua注册索引
                 LuaIndexes.LUA_REGISTRYINDEX = LuaAPI.xlua_get_registry_index();
 #if GEN_CODE_MINIMIZE
                 LuaAPI.xlua_set_csharp_wrapper_caller(InternalGlobals.CSharpWrapperCallerPtr);
@@ -86,6 +87,8 @@ namespace XLua
                 translator = new ObjectTranslator(this, rawL);
                 translator.createFunctionMetatable(rawL);
                 translator.OpenLib(rawL);
+            
+                //往对象转换器池子里面加一个转换器
                 ObjectTranslatorPool.Instance.Add(rawL, translator);
 
                 LuaAPI.lua_atpanic(rawL, StaticLuaCallbacks.Panic);
@@ -398,6 +401,7 @@ namespace XLua
                     throw new InvalidOperationException("try to dispose a LuaEnv with C# callback!");
                 }
                 
+                //从对象转换器池子里面删除转换器
                 ObjectTranslatorPool.Instance.Remove(L);
 
                 LuaAPI.lua_close(L);

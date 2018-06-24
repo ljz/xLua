@@ -4,6 +4,7 @@
  * Licensed under the MIT License (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
  * http://opensource.org/licenses/MIT
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+ * 这个类的主要作用就是实现了C#调用原生代码的功能。
 */
 
 namespace XLua.LuaDLL
@@ -353,11 +354,14 @@ namespace XLua.LuaDLL
         [DllImport(LUADLL,CallingConvention=CallingConvention.Cdecl)]
 		public static extern void lua_pushnil(IntPtr L);
 
+		//将function推到Lua虚拟机栈
 		public static void lua_pushstdcallcfunction(IntPtr L, lua_CSFunction function, int n = 0)//[-0, +1, m]
         {
 #if XLUA_GENERAL || (UNITY_WSA && !UNITY_EDITOR)
             GCHandle.Alloc(function);
 #endif
+	        //这个还做了一下处理.
+	        //marshal的获取代理的函数指针,最后把这个指针加到lua虚拟机的栈里面.
             IntPtr fn = Marshal.GetFunctionPointerForDelegate(function);
             xlua_push_csharp_function(L, fn, n);
         }
@@ -452,6 +456,8 @@ namespace XLua.LuaDLL
         [DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
         public static extern void xlua_pushlstring(IntPtr L, byte[] str, int size);
 
+		//xlua推字符串的时候使用
+		//把字符串推到lua虚拟机里面了,同时C#层还记录了一下.
         public static void xlua_pushasciistring(IntPtr L, string str) // for inner use only
         {
             if (str == null)
@@ -602,6 +608,7 @@ namespace XLua.LuaDLL
         public static extern ulong lua_touint64(IntPtr L, int idx);
 
         [DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]
+        //这个是xlua的push,应该是lua虚拟机被改造过的.
         public static extern void xlua_push_csharp_function(IntPtr L, IntPtr fn, int n);//[-0,+1,m]
 
         [DllImport(LUADLL, CallingConvention = CallingConvention.Cdecl)]

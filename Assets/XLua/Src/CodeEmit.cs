@@ -197,6 +197,7 @@ namespace XLua
             }
         }
 
+        //代码发射模块
         private ModuleBuilder CodeEmitModule
         {
             get
@@ -212,6 +213,7 @@ namespace XLua
             }
         }
 
+        //发射代理实现
         public Type EmitDelegateImpl(IEnumerable<IGrouping<MethodInfo, Type>> groups)
         {
             TypeBuilder impl_type_builder = CodeEmitModule.DefineType("XLuaGenDelegateImpl" + (genID++), TypeAttributes.Public, typeof(DelegateBridgeBase));
@@ -270,6 +272,7 @@ namespace XLua
             return impl_type_builder.CreateType();
         }
 
+        
         private void EmitGetObject(ILGenerator il, int offset, Type type, LocalBuilder L, LocalBuilder translator, LocalBuilder offsetBase, bool isParam = false)
         {
             if (!fixCaster.ContainsKey(type) && !typedCaster.ContainsKey(type))

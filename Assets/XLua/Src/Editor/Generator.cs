@@ -30,53 +30,56 @@ namespace CSObjectWrapEditor
         public static string common_path = Application.dataPath + "/XLua/Gen/";
 #endif
 
+        //生成器配置
+        //里面只是对common_path进行了赋值,具体不知道是干嘛的.应该是可以对这个生成路径进行配置.如果配置了就用新的,否则就用
+        //默认的,就这么简单.写这么多代码不知道是什么鬼意思.
         static GeneratorConfig()
         {
-            Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GeneratorConfig Start");
+            //遍历所有类型
             foreach(var type in (from type in Utils.GetAllTypes()
             where type.IsAbstract && type.IsSealed
-            select type))
+            select type))//遍历所有的类型,找到封闭和抽象的
             {
-                Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Fisrt Type");
-                Debug.Log("type ==="+ type);
+                //从这些模块里面去拿到他们的静态,公共,非公共,仅仅是声明的这些成员(域)
                 foreach (var field in type.GetFields(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly))
                 {
+                    //如果这个成员的域类型是字符串类型,并且满足后面这个什么鬼条件.
                     if (field.FieldType == typeof(string) && field.IsDefined(typeof(GenPathAttribute), false))
                     {
-                        Debug.Log(" in if ");
+                        //得到这个域的路径
                         common_path = field.GetValue(null) as string;
                         if (!common_path.EndsWith("/"))
                         {
                             common_path = common_path + "/";
                         }
-                        Debug.Log("common_path ====="+common_path);
                     }
                 }
-                Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>>>second prop ");
+                
+                //上面是方法,这个是属性,成员变量等等.
                 foreach (var prop in type.GetProperties(BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.DeclaredOnly))
                 {
                     if (prop.PropertyType == typeof(string) && prop.IsDefined(typeof(GenPathAttribute), false))
                     {
-                        Debug.Log("in if ");
                         common_path = prop.GetValue(null, null) as string;
                         if (!common_path.EndsWith("/"))
                         {
                             common_path = common_path + "/";
                         }
-                        Debug.Log("common_path ========="+common_path);
                     }
                 }
             }
-            Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>>>GeneratorConfig End");
         }
     }
 
+    //从名字上来看是我们自定义的生成任务函数.
+    //反正什么都没有做
     public struct CustomGenTask
     {
         public LuaTable Data;
         public TextWriter Output;
     }
 
+    //用户决定要对哪几种类型的标签进行处理.在包一层的时候会找下面击中类型的标签,然后进行处理.
     public struct UserConfig
     {
         public IEnumerable<Type> LuaCallCSharp;
@@ -100,6 +103,7 @@ namespace CSObjectWrapEditor
         public string text;
     }
 
+    //xlua模板结构体,就是说wraper的种类有下面这么多种
     public struct XLuaTemplates
     {
         public XLuaTemplate LuaClassWrap;
@@ -113,19 +117,23 @@ namespace CSObjectWrapEditor
         public XLuaTemplate TemplateCommon;
     }
 
+    //wraper生成器
     public static class Generator
     {
         static LuaEnv luaenv = new LuaEnv();
+        //操作方法名列表,操作加,操作减,操作乘,除,等于,等等
         static List<string> OpMethodNames = new List<string>() { "op_Addition", "op_Subtraction", "op_Multiply", "op_Division", "op_Equality", "op_UnaryNegation", "op_LessThan", "op_LessThanOrEqual", "op_Modulus",
             "op_BitwiseAnd", "op_BitwiseOr", "op_ExclusiveOr", "op_OnesComplement", "op_LeftShift", "op_RightShift"};
+        //定义一个模板结构体引用
         private static XLuaTemplates templateRef;
 
         static Generator()
         {
-            Debug.Log("in class Generator struct Generator function");
 #if !XLUA_GENERAL
+            //这个ScriptableObject.CreateInstance<T>();就是说创建一个T的实例,并且这个实例是可以序列化的.是unity提供的接口.
             TemplateRef template_ref = ScriptableObject.CreateInstance<TemplateRef>();
 
+            //实例化这个模板结构体引用对象,这个会将结构体中的每个属性都初始化了.
             templateRef = new XLuaTemplates()
             {
 #if GEN_CODE_MINIMIZE
@@ -151,7 +159,8 @@ namespace CSObjectWrapEditor
                 TemplateCommon = { name = template_ref.TemplateCommon.name, text = template_ref.TemplateCommon.text },
             };
 #endif
-            //loader require use it to load file
+            //加载器,到那个文件夹去加载文件.
+            //只有TemplateCommon有处理,why?
             luaenv.AddLoader((ref string filepath) =>
             {
                 if (filepath == "TemplateCommon")
@@ -189,7 +198,6 @@ namespace CSObjectWrapEditor
 
         static IEnumerable<MethodInfo> GetExtensionMethods(Type extendedType)
         {
-            Debug.Log("Get Extension Methods by extendedType");
             if (type_has_extension_methods == null)
             {
                 var gen_types = LuaCallCSharp;
@@ -262,6 +270,7 @@ namespace CSObjectWrapEditor
         static void getClassInfo(Type type, LuaTable parameters)
         {
             parameters.Set("type", type);
+
             var constructors = new List<MethodBase>();
             var constructor_def_vals = new List<int>();
             if (!type.IsAbstract)
@@ -363,7 +372,7 @@ namespace CSObjectWrapEditor
 
             parameters.Set("getters", type.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.IgnoreCase | BindingFlags.DeclaredOnly)
                 
-                .Where(prop => prop.CanRead && (prop.GetGetMethod() != null)  && prop.Name != "Item" && !isObsolete(prop) && !isObsolete(prop.GetGetMethod()) && !isMemberInBlackList(prop) && !isMemberInBlackList(prop.GetGetMethod())).Select(prop => new { prop.Name, IsStatic = prop.GetGetMethod().IsStatic, ReadOnly = false, Type = prop.PropertyType })
+                .Where(prop => prop.CanRead && (prop.GetGetMethod() != null)  && prop.Name != "Item" && !isObsolete(prop) && !isMemberInBlackList(prop)).Select(prop => new { prop.Name, IsStatic = prop.GetGetMethod().IsStatic, ReadOnly = false, Type = prop.PropertyType })
                 .Concat(
                     type.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.IgnoreCase | BindingFlags.DeclaredOnly)
                     .Where(field => !isObsolete(field) && !isMemberInBlackList(field))
@@ -371,7 +380,7 @@ namespace CSObjectWrapEditor
                 ).Where(info => !IsDoNotGen(type, info.Name))/*.Where(getter => !typeof(Delegate).IsAssignableFrom(getter.Type))*/.ToList());
 
             parameters.Set("setters", type.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.IgnoreCase | BindingFlags.DeclaredOnly)
-                .Where(prop => prop.CanWrite && (prop.GetSetMethod() != null) && prop.Name != "Item" && !isObsolete(prop) && !isObsolete(prop.GetSetMethod()) && !isMemberInBlackList(prop) && !isMemberInBlackList(prop.GetSetMethod())).Select(prop => new { prop.Name, IsStatic = prop.GetSetMethod().IsStatic, Type = prop.PropertyType, IsProperty = true })
+                .Where(prop => prop.CanWrite && (prop.GetSetMethod() != null) && prop.Name != "Item" && !isObsolete(prop) && !isMemberInBlackList(prop)).Select(prop => new { prop.Name, IsStatic = prop.GetSetMethod().IsStatic, Type = prop.PropertyType, IsProperty = true })
                 .Concat(
                     type.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static | BindingFlags.IgnoreCase | BindingFlags.DeclaredOnly)
                     .Where(field => !isObsolete(field) && !isMemberInBlackList(field) && !field.IsInitOnly && !field.IsLiteral)
@@ -554,11 +563,14 @@ namespace CSObjectWrapEditor
         }
 
         static Dictionary<string, LuaFunction> templateCache = new Dictionary<string, LuaFunction>();
+        //生成一个wraper.
         static void GenOne(Type type, Action<Type, LuaTable> type_info_getter, XLuaTemplate templateAsset, StreamWriter textWriter)
         {
-            Debug.Log("GenOne, chan sheng one ");
             if (isObsolete(type)) return;
             LuaFunction template;
+            
+            //根据传入的参数templateAsset(LuaXXXWraper)来得到一个LuaFunction.
+            //所以说从这里看出来是一个桥梁:将C#的接口转换成LuaXXWraper,进而得到一个LuaFunction;即C#到lua接口的映射.
             if (!templateCache.TryGetValue(templateAsset.name, out template))
             {
                 template = XLua.TemplateEngine.LuaTemplate.Compile(luaenv, templateAsset.text);
@@ -571,13 +583,14 @@ namespace CSObjectWrapEditor
             type_info.SetMetaTable(meta);
             meta.Dispose();
 
+            //type_info.Set("type", type);就是把type记录到type_info这个lua表里面.
             type_info_getter(type, type_info);
 
             try
             {
+                //生成代码
                 string genCode = XLua.TemplateEngine.LuaTemplate.Execute(template, type_info);
-                // string filePath = save_path + type.ToString().Replace("+", "").Replace(".", "").Replace("`", "").Replace("&", "").Replace("[", "").Replace("]", "").Replace(",", "") + file_suffix + ".cs";
-                // Debug.Log("filePath ==== "+filePath);
+                //string filePath = save_path + type.ToString().Replace("+", "").Replace(".", "").Replace("`", "").Replace("&", "").Replace("[", "").Replace("]", "").Replace(",", "") + file_suffix + ".cs";
                 textWriter.Write(genCode);
                 textWriter.Flush();
             }
@@ -595,10 +608,11 @@ namespace CSObjectWrapEditor
             }
         }
 
+        //下面是生成各种类型的wraper,比如枚举,interface,delegate, 等等.
+        
         static void GenEnumWrap(IEnumerable<Type> types, string save_path)
         {
             string filePath = save_path + "EnumWrap.cs";
-            Debug.Log("filePath ===="+filePath);
             StreamWriter textWriter = new StreamWriter(filePath, false, Encoding.UTF8);
             
             GenOne(null, (type, type_info) =>
@@ -611,14 +625,12 @@ namespace CSObjectWrapEditor
 
         static void GenInterfaceBridge(IEnumerable<Type> types, string save_path)
         {
-            Debug.Log("gen interface bridge save_path ===="+ save_path);
             foreach (var wrap_type in types)
             {
                 if (!wrap_type.IsInterface) continue;
 
                 string filePath = save_path + wrap_type.ToString().Replace("+", "").Replace(".", "")
                     .Replace("`", "").Replace("&", "").Replace("[", "").Replace("]", "").Replace(",", "") + "Bridge.cs";
-                    Debug.Log("filepath ==="+filePath);
                 StreamWriter textWriter = new StreamWriter(filePath, false, Encoding.UTF8);
                 GenOne(wrap_type, (type, type_info) =>
                 {
@@ -972,7 +984,6 @@ namespace CSObjectWrapEditor
 
         static void GenWrap(IEnumerable<Type> types, string save_path)
         {
-            Debug.Log("in GenWrap");
             types = types.Where(type=>!type.IsEnum);
 
 #if GENERIC_SHARING
@@ -980,17 +991,14 @@ namespace CSObjectWrapEditor
 #endif
 
             var typeMap = types.ToDictionary(type => {
-                Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>type:" + type);
+                //Debug.Log("type:" + type);
                 return type.ToString();
             });
 
             foreach (var wrap_type in types)
             {
-                Debug.Log("wrap_type =---=="+wrap_type.ToString());
                 string filePath = save_path + wrap_type.ToString().Replace("+", "").Replace(".", "")
                     .Replace("`", "").Replace("&", "").Replace("[", "").Replace("]", "").Replace(",", "") + "Wrap.cs";
-                
-                Debug.Log("filePath ===---=="+filePath);
                 StreamWriter textWriter = new StreamWriter(filePath, false, Encoding.UTF8);
                 if (wrap_type.IsEnum)
                 {
@@ -1505,8 +1513,6 @@ namespace CSObjectWrapEditor
         {
             templateCache.Clear();
             Directory.CreateDirectory(save_path);
-            Debug.Log("wraps===="+wraps);
-            Debug.Log("save_path ==="+save_path);
             GenWrap(wraps, save_path);
             GenWrapPusher(gc_optimze_list.Concat(wraps.Where(type=>type.IsEnum)).Distinct(), save_path);
             GenPackUnpack(gc_optimze_list.Where(type => !type.IsPrimitive && SizeOf(type) != -1), save_path);
@@ -1554,30 +1560,27 @@ namespace CSObjectWrapEditor
         }
 
         [MenuItem("XLua/Generate Code", false, 1)]
+        //这里是目录中点击Generate Code 的时候调用的入口.就是生成所有的wraper代码.
         public static void GenAll()
         {
-            Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>MenuItem('XLua/Generate Code', false, 1)]");
             var start = DateTime.Now;
-            Debug.Log("start time ==="+start);
-            Debug.Log("create directory common_path ==="+GeneratorConfig.common_path);
             Directory.CreateDirectory(GeneratorConfig.common_path);
+            //得到生成配置,其实就是遍历所有的类型,把所有的需要处理类型的信息分别放到几个对应的列表中.
+            //这样做了之后就可以进行处理了.
             GetGenConfig(Utils.GetAllTypes());
             luaenv.DoString("require 'TemplateCommon'");
+            //代码生成器,推类型的设置器
             var gen_push_types_setter = luaenv.Global.Get<LuaFunction>("SetGenPushAndUpdateTypes");
             gen_push_types_setter.Call(GCOptimizeList.Where(t => !t.IsPrimitive && SizeOf(t) != -1).Concat(LuaCallCSharp.Where(t => t.IsEnum)).Distinct().ToList());
             var xlua_classes_setter = luaenv.Global.Get<LuaFunction>("SetXLuaClasses");
             xlua_classes_setter.Call(Utils.GetAllTypes().Where(t => t.Namespace == "XLua").ToList());
-            Debug.Log("gen delegate bridges");
             GenDelegateBridges(Utils.GetAllTypes(false));
-            Debug.Log("gen enum wraps");
             GenEnumWraps();
-            Debug.Log("ge code for class");
             GenCodeForClass();
-            Debug.Log("gen lua register");
             GenLuaRegister();
-            Debug.Log("call custom gen");
             callCustomGen();
             Debug.Log("finished! use " + (DateTime.Now - start).TotalMilliseconds + " ms");
+            //生成完了.
             AssetDatabase.Refresh();
         }
 
@@ -1591,9 +1594,6 @@ namespace CSObjectWrapEditor
 
         public static void CustomGen(string template_src, GetTasks get_tasks)
         {
-            Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>in CustomGen function ");
-            Debug.Log("template_src ===="+template_src);
-            // Debug.Log("")
             GetGenConfig(Utils.GetAllTypes());
 
             LuaFunction template = XLua.TemplateEngine.LuaTemplate.Compile(luaenv,
@@ -1611,7 +1611,6 @@ namespace CSObjectWrapEditor
 
                 try
                 {
-                    Debug.Log("gen_task.Data ========="+gen_task.Data);
                     string genCode = XLua.TemplateEngine.LuaTemplate.Execute(template, gen_task.Data);
                     gen_task.Output.Write(genCode);
                     gen_task.Output.Flush();
@@ -1631,45 +1630,28 @@ namespace CSObjectWrapEditor
 
         private static bool isSupportedGenericMethod(MethodInfo method)
         {
-
             if (!method.ContainsGenericParameters)
                 return true;
             var methodParameters = method.GetParameters();
-            var _hasGenericParameter = false;
+            var hasGenericParameter = false;
             for (var i = 0; i < methodParameters.Length; i++)
             {
                 var parameterType = methodParameters[i].ParameterType;
-                if (!isSupportGenericParameter(parameterType, true, ref _hasGenericParameter))
-                    return false;
+                if (parameterType.IsGenericParameter)
+                {
+                    var parameterConstraints = parameterType.GetGenericParameterConstraints();
+                    if (parameterConstraints.Length == 0) return false;
+                    foreach (var parameterConstraint in parameterConstraints)
+                    {
+                        if (!parameterConstraint.IsClass || (parameterConstraint == typeof(ValueType)) || Generator.hasGenericParameter(parameterConstraint))
+                            return false;
+                    }
+                    hasGenericParameter = true;
+                }
             }
-            return _hasGenericParameter;
+            return hasGenericParameter;
         }
-        private static bool isSupportGenericParameter(Type parameterType,bool checkConstraint, ref bool _hasGenericParameter)
-        {
 
-            if (parameterType.IsGenericParameter)
-            {
-                if (!checkConstraint)
-                    return false;
-                var parameterConstraints = parameterType.GetGenericParameterConstraints();
-                if (parameterConstraints.Length == 0) return false;
-                foreach (var parameterConstraint in parameterConstraints)
-                {
-                    if (!parameterConstraint.IsClass || (parameterConstraint == typeof(ValueType)) || Generator.hasGenericParameter(parameterConstraint))
-                        return false;
-                }
-                _hasGenericParameter = true;
-            }
-            else if(parameterType.IsGenericType())
-            {
-                foreach (var argument in parameterType.GetGenericArguments())
-                {
-                    if (!isSupportGenericParameter(argument,false, ref _hasGenericParameter))
-                        return false;
-                }
-            }
-            return true;
-        }
 #if !XLUA_GENERAL
         [UnityEditor.Callbacks.PostProcessScene]
         public static void CheckGenrate()

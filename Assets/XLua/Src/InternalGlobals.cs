@@ -22,19 +22,28 @@ using System.Reflection;
 
 namespace XLua
 {
+    //这个就是全局空间的变量.XLua使用的变量统一放到这个里面
+    //partial:表示这个类可以写成几个部分
+    //内部的全局方法,只能在程序集中访问
     internal partial class InternalGlobals
     {
+        //字符串缓存,往lua虚拟机里面推之后,都会用这个变换缓存一下.
         internal static byte[] strBuff = new byte[256];
 
+        //从Array里面Get/Set类型.
         internal delegate bool TryArrayGet(Type type, RealStatePtr L, ObjectTranslator translator, object obj, int index);
         internal delegate bool TryArraySet(Type type, RealStatePtr L, ObjectTranslator translator, object obj, int array_idx, int obj_idx);
         internal static TryArrayGet genTryArrayGetPtr = null;
         internal static TryArraySet genTryArraySetPtr = null;
 
+        //对象转换器池
+        //对象转换器有什么卵用?
         internal static volatile ObjectTranslatorPool objectTranslatorPool = new ObjectTranslatorPool();
 
+        //Lua注册索引的默认值
         internal static int LUA_REGISTRYINDEX = -10000;
 
+        //支持的操作,如果是发现是处理一个操作符,则需要判断是否是这里支持的,如果不支持就不处理,只有支持的才处理.
         internal static Dictionary<string, string> supportOp = new Dictionary<string, string>()
         {
             { "op_Addition", "__add" },
@@ -54,12 +63,17 @@ namespace XLua
             { "op_RightShift", "__shr" },
         };
 
+        //扩展方法字典
         internal static Dictionary<Type, IEnumerable<MethodInfo>> extensionMethodMap = null;
 
 #if GEN_CODE_MINIMIZE
+    //CSharpWraper调用者
         internal static LuaDLL.CSharpWrapperCaller CSharpWrapperCallerPtr = new LuaDLL.CSharpWrapperCaller(StaticLuaCallbacks.CSharpWrapperCallerImpl);
 #endif
 
+        //懒惰的反射wraper对象,lua调用CSharp函数.我猜测是如果没有到处接口,就是用反射的方式来找到需要调用的接口.
+        //这种方式是比较低效率的.
+        //根据Utils.LazyReflectionCall对象来创建的LuaCSFunction对象.
         internal static LuaCSFunction LazyReflectionWrap = new LuaCSFunction(Utils.LazyReflectionCall);
     }
 
