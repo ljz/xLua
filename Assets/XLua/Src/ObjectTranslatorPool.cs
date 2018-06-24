@@ -34,6 +34,8 @@ namespace XLua
 		}
 
 #if UNITY_EDITOR || XLUA_GENERAL
+		//根据一个真实的状态指针查找转换器
+		//就是从对象转换器池子里面去找
         public static ObjectTranslator FindTranslator(RealStatePtr L)
         {
             return InternalGlobals.objectTranslatorPool.Find(L);
@@ -44,12 +46,16 @@ namespace XLua
 		{
 		}
 		
+		//添加一个对象转换器到这个池子里面
+		//指针是状态指针
 		public void Add (RealStatePtr L, ObjectTranslator translator)
 		{
+			//根据指针从使用luaapi去转换为指针
             var ptr = LuaAPI.xlua_gl(L);
             lastPtr = ptr;
             lastTranslator = translator;
 #if !SINGLE_ENV
+			//加进来,ptr为key,加进来的是弱引用.
             translators.Add(ptr , new WeakReference(translator));
 #endif   
         }
