@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\playcrab\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_xlua.-614799552.00" t="ExcludeRecursive" />
+    <e p="C:\Users\playcrab\Documents\GitHub\xLua" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets\Cinemachine" t="Include">
+        <e p="Base" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Editors" t="Include">
+              <e p="CinemachineBasicMultiChannelPerlinEditor.cs" t="Include" />
+              <e p="CinemachineBlenderSettingsEditor.cs" t="Include" />
+              <e p="CinemachineBlendListCameraEditor.cs" t="Include" />
+              <e p="CinemachineBrainEditor.cs" t="Include" />
+              <e p="CinemachineClearShotEditor.cs" t="Include" />
+              <e p="CinemachineColliderEditor.cs" t="Include" />
+              <e p="CinemachineComposerEditor.cs" t="Include" />
+              <e p="CinemachineConfinerEditor.cs" t="Include" />
+              <e p="CinemachineExternalCameraEditor.cs" t="Include" />
+              <e p="CinemachineFramingTransposerEditor.cs" t="Include" />
+              <e p="CinemachineFreeLookEditor.cs" t="Include" />
+              <e p="CinemachineGroupComposerEditor.cs" t="Include" />
+              <e p="CinemachineHardLockToTargetEditor.cs" t="Include" />
+              <e p="CinemachineHardLookAtEditor.cs" t="Include" />
+              <e p="CinemachineMixingCameraEditor.cs" t="Include" />
+              <e p="CinemachineOrbitalTransposerEditor.cs" t="Include" />
+              <e p="CinemachinePathEditor.cs" t="Include" />
+              <e p="CinemachinePOVEditor.cs" t="Include" />
+              <e p="CinemachineScreenComposerGuides.cs" t="Include" />
+              <e p="CinemachineSmoothPathEditor.cs" t="Include" />
+              <e p="CinemachineStateDrivenCameraEditor.cs" t="Include" />
+              <e p="CinemachineTargetGroupEditor.cs" t="Include" />
+              <e p="CinemachineTrackedDollyEditor.cs" t="Include" />
+              <e p="CinemachineTransposerEditor.cs" t="Include" />
+              <e p="CinemachineVirtualCameraBaseEditor.cs" t="Include" />
+              <e p="CinemachineVirtualCameraEditor.cs" t="Include" />
+            </e>
+            <e p="Menus" t="Include">
+              <e p="CinemachineMenu.cs" t="Include" />
+            </e>
+            <e p="PropertyDrawers" t="Include">
+              <e p="CinemachineBlendDefinitionPropertyDrawer.cs" t="Include" />
+              <e p="CinemachineTagFieldPropertyDrawer.cs" t="Include" />
+              <e p="GetSetDrawer.cs" t="Include" />
+              <e p="LensSettingsPropertyDrawer.cs" t="Include" />
+              <e p="MinDrawer.cs" t="Include" />
+            </e>
+            <e p="Utility" t="Include">
+              <e p="BaseEditor.cs" t="Include" />
+              <e p="EmbeddedAssetHelpers.cs" t="Include" />
+              <e p="SaveDuringPlay.cs" t="Include" />
+              <e p="ScriptableObjectUtility.cs" t="Include" />
+              <e p="SerializedPropertyHelper.cs" t="Include" />
+            </e>
+            <e p="Windows" t="Include">
+              <e p="AboutWindow.cs" t="Include" />
+              <e p="CinemachineColliderPrefs.cs" t="Include" />
+              <e p="CinemachineSettings.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Runtime" t="Include">
+            <e p="Behaviours" t="Include">
+              <e p="CinemachineBlendListCamera.cs" t="Include" />
+              <e p="CinemachineBrain.cs" t="Include" />
+              <e p="CinemachineClearShot.cs" t="Include" />
+              <e p="CinemachineCollider.cs" t="Include" />
+              <e p="CinemachineConfiner.cs" t="Include" />
+              <e p="CinemachineDollyCart.cs" t="Include" />
+              <e p="CinemachineExternalCamera.cs" t="Include" />
+              <e p="CinemachineFollowZoom.cs" t="Include" />
+              <e p="CinemachineFreeLook.cs" t="Include" />
+              <e p="CinemachineMixingCamera.cs" t="Include" />
+              <e p="CinemachinePath.cs" t="Include" />
+              <e p="CinemachinePipeline.cs" t="Include" />
+              <e p="CinemachineSmoother.cs" t="Include" />
+              <e p="CinemachineSmoothPath.cs" t="Include" />
+              <e p="CinemachineStateDrivenCamera.cs" t="Include" />
+              <e p="CinemachineTargetGroup.cs" t="Include" />
+              <e p="CinemachineVirtualCamera.cs" t="Include" />
+            </e>
+            <e p="Components" t="Include">
+              <e p="CinemachineBasicMultiChannelPerlin.cs" t="Include" />
+              <e p="CinemachineComposer.cs" t="Include" />
+              <e p="CinemachineFramingTransposer.cs" t="Include" />
+              <e p="CinemachineGroupComposer.cs" t="Include" />
+              <e p="CinemachineHardLockToTarget.cs" t="Include" />
+              <e p="CinemachineHardLookAt.cs" t="Include" />
+              <e p="CinemachineOrbitalTransposer.cs" t="Include" />
+              <e p="CinemachinePOV.cs" t="Include" />
+              <e p="CinemachineSameAsFollowObject.cs" t="Include" />
+              <e p="CinemachineTrackedDolly.cs" t="Include" />
+              <e p="CinemachineTransposer.cs" t="Include" />
+            </e>
+            <e p="Core" t="Include">
+              <e p="AxisState.cs" t="Include" />
+              <e p="CameraState.cs" t="Include" />
+              <e p="CinemachineBlend.cs" t="Include" />
+              <e p="CinemachineBlenderSettings.cs" t="Include" />
+              <e p="CinemachineComponentBase.cs" t="Include" />
+              <e p="CinemachineCore.cs" t="Include" />
+              <e p="CinemachineDebugLogger.cs" t="Include" />
+              <e p="CinemachineExtension.cs" t="Include" />
+              <e p="CinemachinePathBase.cs" t="Include" />
+              <e p="CinemachinePropertyAttribute.cs" t="Include" />
+              <e p="CinemachineVirtualCameraBase.cs" t="Include" />
+              <e p="GaussianFilter.cs" t="Include" />
+              <e p="ICinemachineCamera.cs" t="Include" />
+              <e p="ICinemachineComponent.cs" t="Include" />
+              <e p="LensSettings.cs" t="Include" />
+              <e p="NoiseSettings.cs" t="Include" />
+              <e p="Predictor.cs" t="Include" />
+              <e p="ReflectionHelpers.cs" t="Include" />
+              <e p="SplineHelpers.cs" t="Include" />
+              <e p="UnityVectorExtensions.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PostFX" t="Include">
+          <e p="CinemachinePostFX.cs" t="Include" />
+          <e p="CinemachinePostProcessing.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="CinemachinePostProcessingEditor.cs" t="Include" />
+            <e p="PostFXAutoImport.cs" t="Include" />
+          </e>
+        </e>
+        <e p="ReleaseNotes.txt" t="Include" />
+        <e p="Timeline" t="Include">
+          <e p="CinemachineMixer.cs" t="Include" />
+          <e p="CinemachineShot.cs" t="Include" />
+          <e p="CinemachineTrack.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="CinemachineShotEditor.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Assets\ExposedReferenceExample.cs" t="Include" />
+      <e p="Assets\playabletest.cs" t="Include" />
+      <e p="Assets\TestExample.cs" t="Include" />
+      <e p="Assets\xLua" t="Include">
+        <e p="CHANGELOG.txt" t="Include" />
+        <e p="Examples" t="Include">
+          <e p="01_Helloworld" t="Include">
+            <e p="Helloworld.cs" t="Include" />
+          </e>
+          <e p="02_U3DScripting" t="Include">
+            <e p="LuaBehaviour.cs" t="Include" />
+            <e p="LuaTestScript.lua.txt" t="Include" />
+          </e>
+          <e p="03_UIEvent" t="Include">
+            <e p="ButtonInteraction.lua.txt" t="Include" />
+          </e>
+          <e p="04_LuaObjectOrented" t="Include">
+            <e p="InvokeLua.cs" t="Include" />
+          </e>
+          <e p="05_NoGc" t="Include">
+            <e p="NoGc.cs" t="Include" />
+          </e>
+          <e p="06_Coroutine" t="Include">
+            <e p="Coroutine_Runner.cs" t="Include" />
+            <e p="CoroutineTest.cs" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="coruntine_test.lua.txt" t="Include" />
+              <e p="cs_coroutine.lua.txt" t="Include" />
+            </e>
+          </e>
+          <e p="07_AsyncTest" t="Include">
+            <e p="AsyncTest.cs" t="Include" />
+            <e p="MessageBox.cs" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="async_test.lua.txt" t="Include" />
+              <e p="message_box.lua.txt" t="Include" />
+            </e>
+          </e>
+          <e p="08_Hotfix" t="Include">
+            <e p="HotfixTest.cs" t="Include" />
+            <e p="HotfixTest2.cs" t="Include" />
+            <e p="StatefullTest.cs" t="Include" />
+          </e>
+          <e p="09_GenericMethod" t="Include">
+            <e p="Foo.cs" t="Include" />
+            <e p="GenericMethodExample.cs" t="Include" />
+          </e>
+          <e p="10_SignatureLoader" t="Include">
+            <e p="SignatureLoaderTest.cs" t="Include" />
+          </e>
+          <e p="11_RawObject" t="Include">
+            <e p="RawObjectTest.cs" t="Include" />
+          </e>
+          <e p="12_ReImplementInLua" t="Include">
+            <e p="ReImplementInLua.cs" t="Include" />
+          </e>
+          <e p="ExampleGenConfig.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="perf" t="Include">
+            <e p="memory.lua.txt" t="Include" />
+            <e p="profiler.lua.txt" t="Include" />
+          </e>
+          <e p="tdr" t="Include">
+            <e p="tdr.lua.txt" t="Include" />
+          </e>
+          <e p="xLua" t="Include">
+            <e p="util.lua.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Src" t="Include">
+          <e p="CodeEmit.cs" t="Include" />
+          <e p="CopyByValue.cs" t="Include" />
+          <e p="DelegateBridge.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="Generator.cs" t="Include" />
+            <e p="Hotfix.cs" t="Include" />
+            <e p="LinkXmlGen" t="Include">
+              <e p="LinkXmlGen.cs" t="Include" />
+              <e p="LinkXmlGen.tpl.txt" t="Include" />
+            </e>
+            <e p="Template" t="Include">
+              <e p="LuaClassWrap.tpl.txt" t="Include" />
+              <e p="LuaClassWrapGCM.tpl.txt" t="Include" />
+              <e p="LuaDelegateBridge.tpl.txt" t="Include" />
+              <e p="LuaDelegateWrap.tpl.txt" t="Include" />
+              <e p="LuaEnumWrap.tpl.txt" t="Include" />
+              <e p="LuaEnumWrapGCM.tpl.txt" t="Include" />
+              <e p="LuaInterfaceBridge.tpl.txt" t="Include" />
+              <e p="LuaRegister.tpl.txt" t="Include" />
+              <e p="LuaRegisterGCM.tpl.txt" t="Include" />
+              <e p="LuaWrapPusher.tpl.txt" t="Include" />
+              <e p="PackUnpack.tpl.txt" t="Include" />
+              <e p="TemplateCommon.lua.txt" t="Include" />
+            </e>
+            <e p="TemplateRef.cs" t="Include" />
+          </e>
+          <e p="GenAttributes.cs" t="Include" />
+          <e p="InternalGlobals.cs" t="Include" />
+          <e p="LuaBase.cs" t="Include" />
+          <e p="LuaDLL.cs" t="Include" />
+          <e p="LuaEnv.cs" t="Include" />
+          <e p="LuaException.cs" t="Include" />
+          <e p="LuaFunction.cs" t="Include" />
+          <e p="LuaTable.cs" t="Include" />
+          <e p="MethodWarpsCache.cs" t="Include" />
+          <e p="ObjectCasters.cs" t="Include" />
+          <e p="ObjectPool.cs" t="Include" />
+          <e p="ObjectTranslator.cs" t="Include" />
+          <e p="ObjectTranslatorPool.cs" t="Include" />
+          <e p="RawObject.cs" t="Include" />
+          <e p="SignatureLoader.cs" t="Include" />
+          <e p="StaticLuaCallbacks.cs" t="Include" />
+          <e p="TemplateEngine" t="Include">
+            <e p="TemplateEngine.cs" t="Include" />
+          </e>
+          <e p="TypeExtensions.cs" t="Include" />
+          <e p="Utils.cs" t="Include" />
+        </e>
+        <e p="Tutorial" t="Include">
+          <e p="CSharpCallLua" t="Include">
+            <e p="CSCallLua.cs" t="Include" />
+          </e>
+          <e p="LoadLuaScript" t="Include">
+            <e p="ByFile" t="Include">
+              <e p="ByFile.cs" t="Include" />
+              <e p="Resources" t="Include">
+                <e p="byfile.lua.txt" t="Include" />
+              </e>
+            </e>
+            <e p="ByString" t="Include">
+              <e p="ByString.cs" t="Include" />
+            </e>
+            <e p="Loader" t="Include">
+              <e p="CustomLoader.cs" t="Include" />
+            </e>
+          </e>
+          <e p="LuaCallCSharp" t="Include">
+            <e p="LuaCallCs.cs" t="Include" />
+          </e>
+          <e p="TODOTest" t="Include">
+            <e p="NewSurfaceShader.shader" t="Include" />
+            <e p="NewUnlitShader.shader" t="Include" />
+            <e p="ResManager.cs" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="xls2lua" t="Include">
+                <e p="Lib" t="Include">
+                  <e p="distutils" t="Include">
+                    <e p="README.txt" t="Include" />
+                  </e>
+                  <e p="idlelib" t="Include">
+                    <e p="CREDITS.txt" t="Include" />
+                    <e p="extend.txt" t="Include" />
+                    <e p="help.txt" t="Include" />
+                    <e p="HISTORY.txt" t="Include" />
+                    <e p="idle_test" t="Include">
+                      <e p="README.txt" t="Include" />
+                    </e>
+                    <e p="NEWS.txt" t="Include" />
+                    <e p="README.txt" t="Include" />
+                    <e p="TODO.txt" t="Include" />
+                  </e>
+                  <e p="lib2to3" t="Include">
+                    <e p="Grammar.txt" t="Include" />
+                    <e p="PatternGrammar.txt" t="Include" />
+                    <e p="tests" t="Include">
+                      <e p="data" t="Include">
+                        <e p="README.txt" t="Include" />
+                      </e>
+                    </e>
+                  </e>
+                  <e p="site-packages" t="Include">
+                    <e p="pip-1.5.6.dist-info" t="Include">
+                      <e p="entry_points.txt" t="Include" />
+                      <e p="top_level.txt" t="Include" />
+                    </e>
+                    <e p="README.txt" t="Include" />
+                    <e p="setuptools" t="Include">
+                      <e p="command" t="Include">
+                        <e p="launcher manifest.xml" t="Include" />
+                      </e>
+                    </e>
+                    <e p="setuptools-2.1.dist-info" t="Include">
+                      <e p="dependency_links.txt" t="Include" />
+                      <e p="entry_points.txt" t="Include" />
+                      <e p="top_level.txt" t="Include" />
+                    </e>
+                  </e>
+                  <e p="test" t="Include">
+                    <e p="cjkencodings" t="Include">
+                      <e p="big5-utf8.txt" t="Include" />
+                      <e p="big5.txt" t="Include" />
+                      <e p="big5hkscs-utf8.txt" t="Include" />
+                      <e p="big5hkscs.txt" t="Include" />
+                      <e p="cp949-utf8.txt" t="Include" />
+                      <e p="cp949.txt" t="Include" />
+                      <e p="euc_jisx0213-utf8.txt" t="Include" />
+                      <e p="euc_jisx0213.txt" t="Include" />
+                      <e p="euc_jp-utf8.txt" t="Include" />
+                      <e p="euc_jp.txt" t="Include" />
+                      <e p="euc_kr-utf8.txt" t="Include" />
+                      <e p="euc_kr.txt" t="Include" />
+                      <e p="gb18030-utf8.txt" t="Include" />
+                      <e p="gb18030.txt" t="Include" />
+                      <e p="gb2312-utf8.txt" t="Include" />
+                      <e p="gb2312.txt" t="Include" />
+                      <e p="gbk-utf8.txt" t="Include" />
+                      <e p="gbk.txt" t="Include" />
+                      <e p="hz-utf8.txt" t="Include" />
+                      <e p="hz.txt" t="Include" />
+                      <e p="iso2022_jp-utf8.txt" t="Include" />
+                      <e p="iso2022_jp.txt" t="Include" />
+                      <e p="iso2022_kr-utf8.txt" t="Include" />
+                      <e p="iso2022_kr.txt" t="Include" />
+                      <e p="johab-utf8.txt" t="Include" />
+                      <e p="johab.txt" t="Include" />
+                      <e p="shift_jis-utf8.txt" t="Include" />
+                      <e p="shift_jis.txt" t="Include" />
+                      <e p="shift_jisx0213-utf8.txt" t="Include" />
+                      <e p="shift_jisx0213.txt" t="Include" />
+                    </e>
+                    <e p="cmath_testcases.txt" t="Include" />
+                    <e p="crashers" t="Include">
+                      <e p="README.txt" t="Include" />
+                    </e>
+                    <e p="data" t="Include">
+                      <e p="README.txt" t="Include" />
+                    </e>
+                    <e p="exception_hierarchy.txt" t="Include" />
+                    <e p="floating_points.txt" t="Include" />
+                    <e p="formatfloat_testcases.txt" t="Include" />
+                    <e p="ieee754.txt" t="Include" />
+                    <e p="leakers" t="Include">
+                      <e p="README.txt" t="Include" />
+                    </e>
+                    <e p="mailcap.txt" t="Include" />
+                    <e p="math_testcases.txt" t="Include" />
+                    <e p="sndhdrdata" t="Include">
+                      <e p="README.txt" t="Include" />
+                    </e>
+                    <e p="test_doctest.txt" t="Include" />
+                    <e p="test_doctest2.txt" t="Include" />
+                    <e p="test_doctest3.txt" t="Include" />
+                    <e p="test_doctest4.txt" t="Include" />
+                    <e p="test_email" t="Include">
+                      <e p="data" t="Include">
+                        <e p="msg_01.txt" t="Include" />
+                        <e p="msg_02.txt" t="Include" />
+                        <e p="msg_03.txt" t="Include" />
+                        <e p="msg_04.txt" t="Include" />
+                        <e p="msg_05.txt" t="Include" />
+                        <e p="msg_06.txt" t="Include" />
+                        <e p="msg_07.txt" t="Include" />
+                        <e p="msg_08.txt" t="Include" />
+                        <e p="msg_09.txt" t="Include" />
+                        <e p="msg_10.txt" t="Include" />
+                        <e p="msg_11.txt" t="Include" />
+                        <e p="msg_12.txt" t="Include" />
+                        <e p="msg_12a.txt" t="Include" />
+                        <e p="msg_13.txt" t="Include" />
+                        <e p="msg_14.txt" t="Include" />
+                        <e p="msg_15.txt" t="Include" />
+                        <e p="msg_16.txt" t="Include" />
+                        <e p="msg_17.txt" t="Include" />
+                        <e p="msg_18.txt" t="Include" />
+                        <e p="msg_19.txt" t="Include" />
+                        <e p="msg_20.txt" t="Include" />
+                        <e p="msg_21.txt" t="Include" />
+                        <e p="msg_22.txt" t="Include" />
+                        <e p="msg_23.txt" t="Include" />
+                        <e p="msg_24.txt" t="Include" />
+                        <e p="msg_25.txt" t="Include" />
+                        <e p="msg_26.txt" t="Include" />
+                        <e p="msg_27.txt" t="Include" />
+                        <e p="msg_28.txt" t="Include" />
+                        <e p="msg_29.txt" t="Include" />
+                        <e p="msg_30.txt" t="Include" />
+                        <e p="msg_31.txt" t="Include" />
+                        <e p="msg_32.txt" t="Include" />
+                        <e p="msg_33.txt" t="Include" />
+                        <e p="msg_34.txt" t="Include" />
+                        <e p="msg_35.txt" t="Include" />
+                        <e p="msg_36.txt" t="Include" />
+                        <e p="msg_37.txt" t="Include" />
+                        <e p="msg_38.txt" t="Include" />
+                        <e p="msg_39.txt" t="Include" />
+                        <e p="msg_40.txt" t="Include" />
+                        <e p="msg_41.txt" t="Include" />
+                        <e p="msg_42.txt" t="Include" />
+                        <e p="msg_43.txt" t="Include" />
+                        <e p="msg_44.txt" t="Include" />
+                        <e p="msg_45.txt" t="Include" />
+                        <e p="msg_46.txt" t="Include" />
+                      </e>
+                    </e>
+                    <e p="tokenize_tests-latin1-coding-cookie-and-utf8-bom-sig.txt" t="Include" />
+                    <e p="tokenize_tests-no-coding-cookie-and-utf8-bom-sig-only.txt" t="Include" />
+                    <e p="tokenize_tests-utf8-coding-cookie-and-no-utf8-bom-sig.txt" t="Include" />
+                    <e p="tokenize_tests-utf8-coding-cookie-and-utf8-bom-sig.txt" t="Include" />
+                    <e p="tokenize_tests.txt" t="Include" />
+                    <e p="xmltestdata" t="Include">
+                      <e p="simple-ns.xml" t="Include" />
+                      <e p="simple.xml" t="Include" />
+                      <e p="test.xml" t="Include" />
+                    </e>
+                  </e>
+                  <e p="tkinter" t="Include">
+                    <e p="test" t="Include">
+                      <e p="README.txt" t="Include" />
+                    </e>
+                  </e>
+                  <e p="turtledemo" t="Include">
+                    <e p="about_turtle.txt" t="Include" />
+                    <e p="about_turtledemo.txt" t="Include" />
+                    <e p="demohelp.txt" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="ToDoLuaCallCSharpTest.cs" t="Include" />
+            <e p="ToDoTest.cs" t="Include" />
+            <e p="xluaexport.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+      <e p="xlua.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
